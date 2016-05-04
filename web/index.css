@@ -7,8 +7,12 @@ body{
 	background:#e0e0e0;
 	overflow-y: scroll;
 	overflow-x: auto;
-	font-size:12px;
 }
+
+body, table{
+	font-size:14px;
+}
+
 #tbl_root{
 	width:100%;
 	display:none;
@@ -139,6 +143,7 @@ a:hover {
 	position:absolute;
 	top:-32px;
 	left:22px;
+	font-size:12px;
 	color:white;
 	background:red;
 	border-radius:10px;
@@ -147,11 +152,17 @@ a:hover {
 	vertical-align:middle;
 	text-align:center;
 	font-weight:bold;
-	padding:2px 2px;
-	padding-top:0px;
+	padding:1px 1px;
 }
 
 
 .ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor, .ui-tabs .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor, .ui-tabs .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor {
 	outline: 0px solid transparent;/*cancel border in the tab*/
+}
+
+#tbl_skills td{
+}
+pre{
+	text-align:left;
+	white-space: pre-line;	
 }

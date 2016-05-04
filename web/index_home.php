@@ -1,6 +1,6 @@
 <table cellspacing="0" cellpadding="0" width="100%">
 	<tr>
-		<!--COL#2-->
+		<!--COL#1-->
 		<td valign="top" width="700">
 			<table cellspacing="0" cellpadding="0" width="100%">
 				<tr>
@@ -12,7 +12,7 @@
 										<img src="./people/m03.jpg" class="photo_myself"/>
 									</td>
 									<td valign="top">
-										<table style="padding:0px 10px">
+										<table id="tbl_skills" style="padding:0px 10px">
 											<tr>
 												<td colspan="3">
 													<b style="font-size:20px">Samson Chan</b>
@@ -350,7 +350,7 @@
 			</table>
 		</td>
 		
-		<!--COL#1-->
+		<!--COL#2-->
 		<td valign="top" width="300">
 			<table cellspacing="0" cellpadding="0" width="100%" border="0">
 				<tr>

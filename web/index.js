@@ -48,7 +48,7 @@ function initAll(){
 			
 	// start
 	var starttab = 0;	// home
-	//var starttab = 1;	// profile
+	var starttab = 1;	// profile
 	//var starttab = 2;	// network
 	//var starttab = 3;	// ocla
 	$("#tabs").tabs({active:starttab});
