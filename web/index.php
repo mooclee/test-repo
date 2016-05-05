@@ -79,7 +79,7 @@
 	 <tr>
 		<!--topmenu-->
 		<td id="td_topmenu" align="center">
-			<table class="center_contents">
+			<table class="center_contents" border="0">
 				<tr>
 					<td width="130">
 						<img src="yocle_logo15_h50.png"/>
@@ -88,9 +88,7 @@
 						<table cellpadding="0" cellspacing="0">
 							<tr>
 								<td>
-								</td>
-								<td>
-									<input id="inp_search" type="text" placeholder="Search people or activities..."/>
+									<input id="inp_search" class="search_box" type="text" placeholder="Search people or activities..."/>
 								</td>
 								<td style="padding-left:5px">
 									<div class="svg_container" svg="search" style="position: relative; left: -40px; width:16px; height:16px; padding:8px; border-radius:8px; cursor:pointer;" svgfill="blue"></div>
@@ -98,9 +96,23 @@
 							</tr>
 						</table>
 					</td>
-					<td align="right">
-						<table cellspacing="0" id="top_panel">
+					<td style="color:white" align="right">
+						<table>
 							<tr>
+								<td>
+									<img src="./people/m03.jpg" style="height:22px; border:1px black solid"/>
+								</td>
+								<td style="color:white; font-size:14px">
+									Samson Chan
+								</td>
+							</tr>
+						</table>
+					</td>
+					<td align="right" width="280">
+						<table cellspacing="0" id="top_panel" border="0">
+							<tr>
+								<td id="topmenu_settings" class="svg_container topmenu_btn" svg="settings" title="Settings">
+								</td>
 								<td id="topmenu_todolist" class="svg_container topmenu_btn" svg="pin" title="To do list">
 									<div class="balloon"><div class="balloon2"></div></div>
 								</td>
@@ -127,7 +139,7 @@
 				<ul>
 					<li><a href="#tabs-1">Home</a></li>
 					<li><a href="#tabs-2">Profile</a></li>
-					<li><a href="#tabs-3">Network</a></li>
+					<li><a href="#tabs-3">Networks</a></li>
 					<li><a href="#tabs-4">OCLA</a></li>
 					<li><a href="#tabs-5">Post a Project</a></li>
 				</ul>

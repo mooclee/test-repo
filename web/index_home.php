@@ -9,93 +9,24 @@
 							<table>
 								<tr>
 									<td valign="top">
-										<img src="./people/m03.jpg" class="photo_myself"/>
+										<img src="./people/m03.jpg" class="photo_myself" style="padding-left:0px"/>
 									</td>
 									<td valign="top">
-										<table id="tbl_skills" style="padding:0px 10px">
+										<table>
 											<tr>
-												<td colspan="3">
+												<td>
 													<b style="font-size:20px">Samson Chan</b>
 												</td>
 											</tr>
 											<tr>
-												<td colspan="3">
-													<u>Skills Table</u>
-												</td>
-											</tr>
-											<tr>
-												<td nowrap>Teamwork</td>
-												<td class="skill_stamping">
-													<span class="svg_container" svg="stamp" svgfill="black" svgsize="15"></span>
-													<span class="svg_container" svg="stamp" svgfill="black" svgsize="15"></span>
-													<span class="svg_container" svg="stamp" svgfill="black" svgsize="15"></span>
-													<span class="svg_container" svg="stamp" svgfill="black" svgsize="15"></span>
-												</td>
 												<td>
-													<div class="skill_rating">
-														9
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td nowrap>Leadership</td>
-												<td class="skill_stamping">
-													<span class="svg_container" svg="stamp" svgfill="black" svgsize="15"></span>
-													<span class="svg_container" svg="stamp" svgfill="black" svgsize="15"></span>
-												</td>
-												<td>
-													<div class="skill_rating">
-														8
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td nowrap>Problem Solving</td>
-												<td class="skill_stamping">
-													<span class="svg_container" svg="stamp" svgfill="black" svgsize="15"></span>
-												</td>
-												<td>
-													<div class="skill_rating">
-														6
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td nowrap>Critical Thinking</td>
-												<td class="skill_stamping">
-													<span class="svg_container" svg="stamp" svgfill="black" svgsize="15"></span>
-													<span class="svg_container" svg="stamp" svgfill="black" svgsize="15"></span>
-												</td>
-												<td>
-													<div class="skill_rating">
-														7
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td nowrap>Creativity</td>
-												<td class="skill_stamping">
-													<span class="svg_container" svg="stamp" svgfill="black" svgsize="15"></span>
-													<span class="svg_container" svg="stamp" svgfill="black" svgsize="15"></span>
-												</td>
-												<td>
-													<div class="skill_rating">
-														7
-													</div>
+													<?php include 'index_skills_table.php'?>
 												</td>
 											</tr>
 										</table>
 									</td>
-								</tr>
-							</table>
-							
-							<table>
-								<tr>
-									<td colspan="3">
-										<b>Status:</b> Bronze
-									</td>
 									<td>
-										<b>Networks:</b> 120
+										<?php include 'index_status.php'?>
 									</td>
 								</tr>
 							</table>
@@ -116,7 +47,7 @@
 												</td>
 											</tr>
 											<tr>
-												<td class="person_home">
+												<td class="person_name">
 													Chole Madely
 												</td>
 											</tr>
@@ -130,7 +61,7 @@
 												</td>
 											</tr>
 											<tr>
-												<td class="person_home">
+												<td class="person_name">
 													John Davis
 												</td>
 											</tr>
@@ -144,7 +75,7 @@
 												</td>
 											</tr>
 											<tr>
-												<td class="person_home">
+												<td class="person_name">
 													Juliana Altimari
 												</td>
 											</tr>
@@ -158,7 +89,7 @@
 												</td>
 											</tr>
 											<tr>
-												<td class="person_home">
+												<td class="person_name">
 													Evelin Kwok
 												</td>
 											</tr>
@@ -172,7 +103,7 @@
 												</td>
 											</tr>
 											<tr>
-												<td class="person_home">
+												<td class="person_name">
 													Col Macy
 												</td>
 											</tr>
@@ -198,7 +129,7 @@
 												</td>
 											</tr>
 											<tr>
-												<td class="person_home">
+												<td class="person_name">
 													Cherish Chan
 												</td>
 											</tr>
@@ -212,7 +143,7 @@
 												</td>
 											</tr>
 											<tr>
-												<td class="person_home">
+												<td class="person_name">
 													Randell Lee
 												</td>
 											</tr>
@@ -226,8 +157,8 @@
 												</td>
 											</tr>
 											<tr>
-												<td class="person_home">
-													Diana Howland
+												<td class="person_name">
+													Diana Wong
 												</td>
 											</tr>
 										</table>
@@ -240,7 +171,7 @@
 												</td>
 											</tr>
 											<tr>
-												<td class="person_home">
+												<td class="person_name">
 													Shannen Kinsley
 												</td>
 											</tr>
@@ -254,7 +185,7 @@
 												</td>
 											</tr>
 											<tr>
-												<td class="person_home">
+												<td class="person_name">
 													Kayla Vance
 												</td>
 											</tr>
@@ -280,7 +211,7 @@
 												</td>
 											</tr>
 											<tr>
-												<td class="activity_home">
+												<td class="activity_name">
 													HK Red Cross
 												</td>
 											</tr>
@@ -294,7 +225,7 @@
 												</td>
 											</tr>
 											<tr>
-												<td class="activity_home">
+												<td class="activity_name">
 													History Tutorial
 												</td>
 											</tr>
@@ -308,7 +239,7 @@
 												</td>
 											</tr>
 											<tr>
-												<td class="activity_home">
+												<td class="activity_name">
 													USA Study Tour
 												</td>
 											</tr>
@@ -322,7 +253,7 @@
 												</td>
 											</tr>
 											<tr>
-												<td class="activity_home">
+												<td class="activity_name">
 													Board Game Club
 												</td>
 											</tr>
@@ -336,7 +267,7 @@
 												</td>
 											</tr>
 											<tr>
-												<td class="activity_home">
+												<td class="activity_name">
 													Cedars Volunteers
 												</td>
 											</tr>
@@ -411,8 +342,8 @@
 											<td>
 												<img src="./people/f01.jpg" class="photo_msg_preview" valign="top">
 											</td>
-											<td valign="top">
-												<b>Chole Madely</b> Nice to meet you.											
+											<td class="msg_home">
+												<b>Chole Madely</b><br/> Nice to meet you in HK Red Cross.								
 											</td>
 										</tr>
 									</table>
@@ -425,8 +356,8 @@
 											<td>
 												<img src="./people/m01.jpg" class="photo_msg_preview" valign="top">
 											</td>
-											<td valign="top">
-												<b>John Davis</b> Shall we meet in the library?
+											<td class="msg_home">
+												<b>John Davis</b><br/>Shall we meet in the library?
 											</td>
 										</tr>
 									</table>

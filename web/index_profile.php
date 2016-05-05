@@ -1,25 +1,55 @@
 
-<table cellspacing="0" cellpadding="5" width="100%">
+<table cellspacing="0" cellpadding="0" width="100%">
 	<tr>
 		<td>
-			<table cellspacing="0" cellpadding="5">
+			<table cellpadding="0" cellspacing="0" width="100%" class="layout_box" style="padding:2px 8px">
 				<tr>
 					<td>
 						<img id="profile_myphoto" class="photo_myself" src="./people/m03.jpg">
 					</td>
-					<td style="padding:10px" valign="top">
-						<h3>Samson Chan</h3>
-						<h5>2nd year student in Social Science</h5>
-						The University of Hong Kong
+					<td valign="top">
+						<table cellpadding="0" cellspacing="0">
+							<tr>
+								<td>
+									<b style="font-size:20px">Samson Chan</b>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<?php include 'index_skills_table.php'?>
+								</td>
+							</tr>
+						</table>						
+					</td>
+					<td>
+						<?php include 'index_status.php'?>
 					</td>
 				</tr>
+				<tr>
+					<td colspan="4">
+						<table width="100%">
+							<tr>
+								<td>
+									<b>Personal Statement and Objectives</b>
+								</td>
+							</tr>
+							<tr>
+								<td style="border:1px solid lightgray; border-radius:8px; padding:10px; text-align:justify">
+									The study of Social Science is appealing to me because of the diversity of topics they cover and their relevance to our world today. In an increasingly globalised world, it is important to have a deep understanding of the economic and political institutions that govern, and the cultural backgrounds and values of its citizens.<br/><br/>
+									I like travelling and it has broadened my mind to the issues facing our world, and inspired me to investigate further into our origins and the workings of society. After my studies, I hope to work in social welfare and make a meaningful contribution to improving the lives of others and society. I have always enjoyed and felt confident in academia and in experiencing the world outside of the classroom I have been able to confirm my aspirations in life, making me a very motivated, enthusiastic and committed student.
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				
 			</table>
 		</td>
 	</tr>
 	<tr>
 		<td>
 			<ul id="profile_blocks">
-				<li>
+				<li class="ui-state-default">
 					<table width="100%">
 						<tr>
 							<td class="ui-state-default">
@@ -28,19 +58,45 @@
 						</tr>
 						<tr>
 							<td>
-								<pre>
-									<b>Bachelor of Social Science</b>
-									The University of Hong Kong
-								</pre>
+								<table width="100%">
+									<tr>
+										<td class="profile_desc">
+											<pre>
+												<b>Bachelor of Social Science</b>
+												The University of Hong Kong
+												2014 - Present
+											</pre>
+										</td>
+										<td class="profile_logo">
+											<img src="./logo/hku.jpg"/>
+										</td>
+									</tr>
+								</table>
 							</td>
 						</tr>
 						<tr>
 							<td>
-								<pre>
-									<b>Secondary School</b>
-									St. Paul's Co-educational College
-								</pre>
+								<hr noshade style="border:1px solid #e8e8e8">
 							</td>
+						</tr>
+						<tr>
+							<td>
+								<table width="100%">
+									<tr>
+										<td class="profile_desc">
+											<pre>
+												<b>Secondary School</b>
+												St. Paul's Co-educational College
+												2008 - 2014
+											</pre>
+										</td>
+										<td class="profile_logo">
+											<img src="./logo/stpaulcoed.jpg"/>
+										</td>
+									</tr>
+								</table>
+							</td>
+							
 						</tr>
 					</table>
 				</li>
@@ -53,13 +109,21 @@
 						</tr>
 						<tr>
 							<td>
-								<pre>
-									<b>Technical Support Intern IT Department</b>
-									Google Hong Kong Ltd.
-									- Provide Level 1 support
-									- Handled troubleshooting and maintenance as well as monitoring
-									- Deployment of IT
-								</pre>
+								<table width="100%">
+									<tr>
+										<td class="profile_desc">
+											<pre>
+												<b>Customer Support Intern</b>
+												Prudential Hong Kong Ltd.
+												- Handled general customer issues
+												- Filing and data entry
+											</pre>
+										</td>
+										<td class="profile_logo">
+											<img src="./logo/prudential.jpg"/>
+										</td>
+									</tr>
+								</table>
 							</td>
 						</tr>
 					</table>
@@ -73,12 +137,21 @@
 						</tr>
 						<tr>
 							<td>
-								<pre>
-									<b>Volunteer Helper</b>
-									Hong Kong Red Cross
-									2013
-									- Post-earthquake visit to Sichuan
-								</pre>
+								<table width="100%">
+									<tr>
+										<td class="profile_desc">
+											<pre>
+												<b>Volunteer Helper</b>
+												Hong Kong Red Cross
+												Aug 2013
+												- Post-earthquake visit to Sichuan
+											</pre>
+										</td>
+										<td class="profile_logo">
+											<img src="./logo/hkredcross.jpg"/>
+										</td>
+									</tr>
+								</table>
 							</td>
 						</tr>
 					</table>
@@ -97,6 +170,7 @@
 									Swimming
 									Reading
 									Computer programming
+									Hiking
 								</pre>
 							</td>
 						</tr>

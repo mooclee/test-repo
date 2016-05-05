@@ -19,7 +19,7 @@ function initAll(){
 				svgsize = jobj.attr('svgsize')
 		;
 		jhtml
-			.find('path,ellipse,circle')
+			.find('path,ellipse,circle,polygon')
 			.attr('fill', svgfill ? svgfill : '#ffffff')
 		;
 		if (svgsize){
@@ -39,7 +39,14 @@ function initAll(){
 	
 	// profile blocks
 	$('#profile_blocks').sortable({
-		placeholder: "ui-state-highlight"
+		
+		placeholder: 'ui-state-highlight',
+		// http://stackoverflow.com/questions/5791886/jquery-draggable-shows-helper-in-wrong-place-after-page-scrolled
+		helper: function(event, ui){
+			var $clone =  $(ui).clone();
+			$clone .css('position','absolute');
+			return $clone.get(0);
+		},		
 	}).disableSelection();
 
 	// resize
@@ -49,7 +56,7 @@ function initAll(){
 	// start
 	var starttab = 0;	// home
 	var starttab = 1;	// profile
-	//var starttab = 2;	// network
+	var starttab = 2;	// network
 	//var starttab = 3;	// ocla
 	$("#tabs").tabs({active:starttab});
 	
@@ -68,15 +75,16 @@ function onSize(){
 //////////////////////////////////////////////////////////////////////
  
  function setBalloonNumber(name, num){
-	var jobj = $('#topmenu_'+name), jtext = jobj.find('.balloon2');
+	var jobj = $('#topmenu_'+name), jballoon = jobj.find('.balloon'), jtext = jobj.find('.balloon2');
 	if (num){
 		if (num > 99){
 			num = 99;
 		}
 		var offset = jobj.offset(), x = offset.left, y = offset.top, w = jobj.width(), w1 = num.toString().lenth*10;
-		jtext.text(num).show();
+		jtext.text(num);
+		jballoon.show();
 	} else {
-		jtext.hide();
+		jballoon.hide();
 	}
  }
  //*/
