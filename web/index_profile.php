@@ -21,12 +21,12 @@
 							</tr>
 						</table>						
 					</td>
-					<td>
+					<td width="100">
 						<?php include 'index_status.php'?>
 					</td>
 				</tr>
 				<tr>
-					<td colspan="4">
+					<td colspan="4" style="padding-bottom:5px">
 						<table width="100%">
 							<tr>
 								<td>

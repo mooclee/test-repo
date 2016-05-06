@@ -11,6 +11,7 @@
 			<span class="svg_container" svg="stamp" svgfill="black" svgsize="15"></span>
 			<span class="svg_container" svg="stamp" svgfill="black" svgsize="15"></span>
 			<span class="svg_container" svg="stamp" svgfill="black" svgsize="15"></span>
+			<span class="svg_container" svg="stamp" svgfill="black" svgsize="15"></span>
 		</td>
 		<td>
 			<div class="skill_rating">
