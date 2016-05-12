@@ -18,19 +18,14 @@ body, table{
 	display:none;
 }
 .search_box{
-	padding:8px;
+	padding:4px;
 	border-radius:8px;
 	font-size:14px;
 	width:250px;
 }
 #td_topmenu{
-	
-	background-color: #000099;
-	background: linear-gradient(#5050b0, #000070);
-/*	
-	border-bottom-left-radius:8px;
-	border-bottom-right-radius:8px;
-*/	
+/*	background: linear-gradient(#5050b0, #000070);*/
+	background: linear-gradient(#08A919, #127A16);	
 }
 .ui-tabs-anchor{
 }
@@ -135,10 +130,10 @@ a{
   text-decoration: none;
 }
 a:link, a:visited, a:active{
-	color: #8080f0;
+	color: black;
 }
-a:hover {
-  color: hotpink;
+a:hover{
+	color: #8080f0;
 }
 .balloon{
 	position:relative;
@@ -173,7 +168,7 @@ pre{
 
 #profile_blocks table{
 	border-radius:8px;
-	padding:10px;
+	padding:0px 2px;
 }
 #profile_blocks li{
 	border-radius:8px;
@@ -208,6 +203,108 @@ button.small_button{
 	background-color:#f8f8f8;
 	border-width:1px;
 }
+button.medium_button{
+	border-radius:8px;
+	margin:3px;
+	font-size:14px;
+	background-color:#f8f8f8;
+	border-width:1px;
+	padding:4px;
+}
+
 .person_desc{
 	width:200px;
+}
+#bar_myphoto{
+	border-radius: 4px;
+	padding-left: 0px;
+	height: 22px;
+	border: 1px darkgreen solid;
+}
+.ui-menu .ui-menu-item {
+	padding:2px;
+	font-weight:normal;
+	background:none;
+	border-width:0px;	
+}
+
+.layout_text{
+	border-radius: 5px;
+	padding:4px;
+	font-size:16px;
+}
+
+.custom-combobox {
+	position: relative;
+	display: inline-block;
+}
+.custom-combobox-toggle {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin-left: -1px;
+	padding: 0;
+}
+.custom-combobox-input {
+	margin: 0;
+	padding: 5px 10px;
+	width:90px;
+/*	width: 100%;*/
+	color:black;
+}
+
+.ui-widget-content{
+	background:white;
+}
+
+.ui-widget-content input.ui-state-default,
+.ui-widget-content a.ui-state-default
+{
+	background:white;
+}
+
+.ocla_page{
+	display:none;
+}
+
+.dropmenu{
+	position:absolute;
+	display:none;
+	background: white;
+}
+a.dropmenu-item{
+	font-size:12px;
+	background: white;
+}
+
+
+a.dropmenu-item:hover{
+	color: #8080f0;
+}
+.enclosed_text{
+	border-radius:8px;
+	padding:10px;
+	border: 1px solid gray;
+}
+.assessment_datetime{
+	width: 110px;
+}
+.header{
+	font-size: 14px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.ui-widget-content input.ui-state-default, .ui-widget-content a.ui-state-default{
+	color:black;
+	font-weight:normal;
+}
+.assessment_method input{
+	width:120px;
+}
+.assessment_assessor input{
+	width:80px;
+}
+.assessment_status input{
+	width:40px;
 }

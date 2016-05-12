@@ -1,4 +1,4 @@
-<table cellspacing="0" cellpadding="0" width="100%">
+<table cellspacing="0" cellpadding="5" width="100%">
 	<tr>
 		<!--COL#1-->
 		<td valign="top" width="700">
@@ -15,7 +15,7 @@
 										<table>
 											<tr>
 												<td>
-													<b style="font-size:20px">Samson Chan</b>
+													<b style="font-size:20px">Samson Chan</b><br/>Social Science Year 2 HKU
 												</td>
 											</tr>
 											<tr>
@@ -326,6 +326,7 @@
 						</table>
 					</td>
 				</tr>
+				<!--MSG-->
 				<tr>
 					<td style="padding-right:10px">
 						<table class="layout_box" width="100%" style="">
@@ -343,7 +344,35 @@
 												<img src="./people/f01.jpg" class="photo_msg_preview" valign="top">
 											</td>
 											<td class="msg_home">
-												<b>Chole Madely</b><br/> Nice to meet you in HK Red Cross.								
+												<b>Chole Madely</b><br/>Nice to meet you in HK Red Cross.								
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<table>
+										<tr>
+											<td>
+												<img src="./people/m04.jpg" class="photo_msg_preview" valign="top">
+											</td>
+											<td class="msg_home">
+												<b>Randell Lee</b><br/>Shall we meet in the library?
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<table>
+										<tr>
+											<td>
+												<img src="./people/f05.jpg" class="photo_msg_preview" valign="top">
+											</td>
+											<td class="msg_home">
+												<b>Diana Wong</b><br/>Can I borrow your sociology text book?
 											</td>
 										</tr>
 									</table>
@@ -357,7 +386,21 @@
 												<img src="./people/m01.jpg" class="photo_msg_preview" valign="top">
 											</td>
 											<td class="msg_home">
-												<b>John Davis</b><br/>Shall we meet in the library?
+												<b>John Davis</b><br/>Hi! The basketball game is awesome!
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<table>
+										<tr>
+											<td>
+												<img src="./people/f11.jpg" class="photo_msg_preview" valign="top">
+											</td>
+											<td class="msg_home">
+												<b>Romayne Pak</b><br/>Thanks for your help!
 											</td>
 										</tr>
 									</table>

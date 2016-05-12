@@ -1,5 +1,4 @@
-<!--<!doctype html>-->
-
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -21,10 +20,16 @@
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">	
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
   <script src="//code.jquery.com/jquery-1.10.2.js"></script>
   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+  <link href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" type="text/css" rel="stylesheet">
+	<link href="//ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/overcast/jquery-ui.css" type="text/css" rel="stylesheet" >
+<!--	
 	<link href="//ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/redmond/jquery-ui.css" type="text/css" rel="stylesheet" >
+-->
+
+
 	<script>
 		function load_script(path, s){
 			if (s) path += '?d=' + s;
@@ -49,14 +54,13 @@
 		var s = getDateString();
 		var bIsMobile = mobileAndTabletcheck();			
 		if (!bIsMobile){
-			//s = '';	// testing only
+			s = '';	// testing only
 		}
 		// Development loader
-		var cssfiles = 'index.css',
-				jqueryfiles = 'jquery.ba-resize.js',
-				jsfiles = 'index.js svg.js '
+		var cssfiles = 'jquery.datetimepicker.css index.css trumbowyg.css',
+				jqueryfiles = 'jquery-1.10.2.js jquery-ui-1.11.4.js jquery.ba-resize.js trumbowyg.js jquery.datetimepicker.full.js',
+				jsfiles = 'index.js svg.js'
 		;
-		jsfiles='index.js svg.js';
 		[cssfiles, jqueryfiles, jsfiles].forEach(function(files){
 			if (files){
 				files.split(' ').forEach(function(file){
@@ -70,11 +74,10 @@
 		});
 		window.onload = function(){
 			initAll();
-		}		
+		}
 	</script>
 </head>
 <body>
- 
  <table id="tbl_root">
 	 <tr>
 		<!--topmenu-->
@@ -82,7 +85,7 @@
 			<table class="center_contents" border="0">
 				<tr>
 					<td width="130">
-						<img src="yocle_logo15_h50.png"/>
+						<img src="yocle_logo15_h40.png"/>
 					</td>
 					<td id="div_search">
 						<table cellpadding="0" cellspacing="0">
@@ -90,8 +93,8 @@
 								<td>
 									<input id="inp_search" class="search_box" type="text" placeholder="Search people or activities..."/>
 								</td>
-								<td style="padding-left:5px">
-									<div class="svg_container" svg="search" style="position: relative; left: -40px; width:16px; height:16px; padding:8px; border-radius:8px; cursor:pointer;" svgfill="blue"></div>
+								<td style="padding-left:2px">
+									<div class="svg_container" svg="search" style="position: relative; left: -40px; width:16px; height:16px; padding:4px; border-radius:8px; cursor:pointer;" svgfill="green"></div>
 								</td>
 							</tr>
 						</table>
@@ -100,7 +103,7 @@
 						<table>
 							<tr>
 								<td>
-									<img src="./people/m03.jpg" style="height:22px; border:1px black solid"/>
+									<img id="bar_myphoto" src="./people/m03.jpg"/>
 								</td>
 								<td style="color:white; font-size:14px">
 									Samson Chan
@@ -137,11 +140,21 @@
 			<!--tabs-->
 			<div id="tabs" class="center_contents">
 				<ul>
-					<li><a href="#tabs-1">Home</a></li>
-					<li><a href="#tabs-2">Profile</a></li>
-					<li><a href="#tabs-3">Networks</a></li>
-					<li><a href="#tabs-4">OCLA</a></li>
-					<li><a href="#tabs-5">Post a Project</a></li>
+					<li>
+						<a href="#tabs-1">Home</a>
+					</li>
+					<li>
+						<a href="#tabs-2">Profile</a>
+					</li>
+					<li>
+						<a href="#tabs-3">Networks</a>
+					</li>
+					<li>
+						<a href="#tabs-4a" style="cursor: pointer">OCLA</a>
+					</li>
+					<li>
+						<a href="#tabs-5">Post a Project</a>
+					</li>
 				</ul>
 				
 				<!-- HOME -->
@@ -159,19 +172,45 @@
 					<?php include 'index_network.php'?>
 				</div>
 				
-				<div id="tabs-4">
-					<?php include 'index_ocla.php'?>
+				<div id="tabs-4a" class="ocla_page">
+					<?php include 'index_ocla_add.php'?>
+				</div>
+
+				<div id="tabs-4b" class="ocla_page">
+					<?php include 'index_ocla_engaged.php'?>
+				</div>
+
+				<div id="tabs-4c" class="ocla_page">
+					<?php include 'index_ocla_coordinated.php'?>
+				</div>
+
+				<div id="tabs-4d" class="ocla_page">
+					<?php include 'index_ocla_search.php'?>
 				</div>
 				
 				<div id="tabs-5">
 					<?php include 'index_postaproject.php'?>
 				</div>
-				
 			</div>
 		</td>
 	</tr>
+	
 </table>
 
+<ul id="dropmenu_ocla" class="dropmenu">
+  <li>
+		<a href="#tabs-4a" class="dropmenu-item">Add an activity</a>
+	</li>
+  <li>
+		<a href="#tabs-4b" class="dropmenu-item">Activities engaged</a>
+	</li>
+  <li>
+		<a href="#tabs-4c" class="dropmenu-item">Activities coordinated</a>
+	</li>
+  <li>
+		<a href="#tabs-4d" class="dropmenu-item">Seach for participants</a>
+	</li>
+</ul>	
 
 </body>
 </html>

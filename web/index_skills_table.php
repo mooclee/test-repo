@@ -14,9 +14,7 @@
 			<span class="svg_container" svg="stamp" svgfill="black" svgsize="15"></span>
 		</td>
 		<td>
-			<div class="skill_rating">
-				9
-			</div>
+			<div class="skill_rating">9</div>
 		</td>
 	</tr>
 	<tr>
@@ -26,9 +24,7 @@
 			<span class="svg_container" svg="stamp" svgfill="black" svgsize="15"></span>
 		</td>
 		<td>
-			<div class="skill_rating">
-				8
-			</div>
+			<div class="skill_rating">8</div>
 		</td>
 	</tr>
 	<tr>
@@ -37,9 +33,7 @@
 			<span class="svg_container" svg="stamp" svgfill="black" svgsize="15"></span>
 		</td>
 		<td>
-			<div class="skill_rating">
-				6
-			</div>
+			<div class="skill_rating">6</div>
 		</td>
 	</tr>
 	<tr>
@@ -49,9 +43,7 @@
 			<span class="svg_container" svg="stamp" svgfill="black" svgsize="15"></span>
 		</td>
 		<td>
-			<div class="skill_rating">
-				7
-			</div>
+			<div class="skill_rating">7</div>
 		</td>
 	</tr>
 <!--											

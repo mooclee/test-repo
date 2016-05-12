@@ -127,7 +127,7 @@
 										<input class="search_box" style="width:100%" type="text" placeholder="Filter in my network..."/>
 									</td>
 									<td style="padding-left:5px">
-										<div class="svg_container" svg="search" style="position: relative; left: -40px; width:16px; height:16px; padding:8px; border-radius:8px; cursor:pointer;" svgfill="blue">
+										<div class="svg_container" svg="search" style="position: relative; left: -40px; width:16px; height:16px; padding:8px; border-radius:8px; cursor:pointer;" svgfill="green">
 										</div>
 									</td>
 								</tr>
@@ -167,7 +167,7 @@
 										<img src="./people/m09.jpg" class="photo_home"/>
 									</td>
 									<td class="person_desc">
-										<b>Clayton Chan</b><br/>
+										<b>Clayton Poon</b><br/>
 										Social work<br/>
 										HKU<br/><br/>
 									</td>
@@ -215,7 +215,7 @@
 										<img src="./people/m05.jpg" class="photo_home"/>
 									</td>
 									<td class="person_desc">
-										<b>Romayne Pak</b><br/>
+										<b>Stacy Cheng</b><br/>
 										Politics and public administration<br/>
 										HKU<br/><br/>
 									</td>
@@ -237,7 +237,7 @@
 										<img src="./people/m06.jpg" class="photo_home"/>
 									</td>
 									<td class="person_desc">
-										<b>Elwyn Leung</b><br/>
+										<b>Esmond Leung</b><br/>
 										Social Science<br/>
 										HKU<br/><br/>
 									</td>
@@ -259,7 +259,7 @@
 										<img src="./people/m07.jpg" class="photo_home"/>
 									</td>
 									<td class="person_desc">
-										<b>Doris Chow</b><br>
+										<b>David Chow</b><br>
 										Psychology<br/>
 										HKU<br/><br/>
 									</td>
@@ -326,10 +326,10 @@
 							<table height="100%">
 								<tr>
 									<td rowspan="2">
-										<img src="./people/m05.jpg" class="photo_home"/>
+										<img src="./people/f14.jpg" class="photo_home"/>
 									</td>
 									<td class="person_desc">
-										<b>Willis Poon</b><br>
+										<b>Eko Sinta</b><br>
 										Finance<br/>
 										HKU<br/><br/>
 									</td>
@@ -377,7 +377,7 @@
 										<img src="./people/m08.jpg" class="photo_home"/>
 									</td>
 									<td class="person_desc">
-										<b>Elwyn Leung</b><br/>
+										<b>Burt Lau</b><br/>
 										Social Science<br/>
 										HKU<br/><br/>
 									</td>

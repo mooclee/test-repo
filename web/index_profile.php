@@ -11,7 +11,7 @@
 						<table cellpadding="0" cellspacing="0">
 							<tr>
 								<td>
-									<b style="font-size:20px">Samson Chan</b>
+									<b style="font-size:20px">Samson Chan</b><br/>Social Science Year 2 HKU
 								</td>
 							</tr>
 							<tr>
@@ -49,6 +49,35 @@
 	<tr>
 		<td>
 			<ul id="profile_blocks">
+				<li class="ui-state-default">
+					<table width="100%">
+						<tr>
+							<td class="ui-state-default">
+								Work Experience
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<table width="100%">
+									<tr>
+										<td class="profile_desc">
+											<pre>
+												<b>Customer Support Intern</b>
+												Prudential Hong Kong Ltd.
+												- Handled general customer issues
+												- Filing and data entry
+											</pre>
+										</td>
+										<td class="profile_logo">
+											<img src="./logo/prudential.jpg"/>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</li>
+				
 				<li class="ui-state-default">
 					<table width="100%">
 						<tr>
@@ -100,34 +129,7 @@
 						</tr>
 					</table>
 				</li>
-				<li class="ui-state-default">
-					<table width="100%">
-						<tr>
-							<td class="ui-state-default">
-								Work Experience
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<table width="100%">
-									<tr>
-										<td class="profile_desc">
-											<pre>
-												<b>Customer Support Intern</b>
-												Prudential Hong Kong Ltd.
-												- Handled general customer issues
-												- Filing and data entry
-											</pre>
-										</td>
-										<td class="profile_logo">
-											<img src="./logo/prudential.jpg"/>
-										</td>
-									</tr>
-								</table>
-							</td>
-						</tr>
-					</table>
-				</li>
+				
 				<li class="ui-state-default">
 					<table width="100%">
 						<tr>
