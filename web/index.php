@@ -58,7 +58,7 @@
 		}
 		// Development loader
 		var cssfiles = 'jquery.datetimepicker.css index.css trumbowyg.css',
-				jqueryfiles = 'jquery-1.10.2.js jquery-ui-1.11.4.js jquery.ba-resize.js trumbowyg.js jquery.datetimepicker.full.js',
+				jqueryfiles = 'jquery-1.10.2.js jquery-ui-1.11.4.js jquery.ba-resize.js trumbowyg.js jquery.datetimepicker.full.js jquery.autogrowtextarea.js autocomplete_combo.js',
 				jsfiles = 'index.js svg.js'
 		;
 		[cssfiles, jqueryfiles, jsfiles].forEach(function(files){
@@ -172,19 +172,19 @@
 					<?php include 'index_network.php'?>
 				</div>
 				
-				<div id="tabs-4a" class="ocla_page">
-					<?php include 'index_ocla_add.php'?>
-				</div>
-
-				<div id="tabs-4b" class="ocla_page">
+				<div id="tabs-4a" class="ocla_page ui-tabs-panel ui-widget-content ui-corner-bottom">
 					<?php include 'index_ocla_engaged.php'?>
 				</div>
 
-				<div id="tabs-4c" class="ocla_page">
+				<div id="tabs-4b" class="ocla_page ui-tabs-panel ui-widget-content ui-corner-bottom">
 					<?php include 'index_ocla_coordinated.php'?>
 				</div>
 
-				<div id="tabs-4d" class="ocla_page">
+				<div id="tabs-4c" class="ocla_page ui-tabs-panel ui-widget-content ui-corner-bottom">
+					<?php include 'index_ocla_add.php'?>
+				</div>
+
+				<div id="tabs-4d" class="ocla_page ui-tabs-panel ui-widget-content ui-corner-bottom">
 					<?php include 'index_ocla_search.php'?>
 				</div>
 				
@@ -199,13 +199,13 @@
 
 <ul id="dropmenu_ocla" class="dropmenu">
   <li>
-		<a href="#tabs-4a" class="dropmenu-item">Add an activity</a>
+		<a href="#tabs-4c" class="dropmenu-item">Add an activity</a>
 	</li>
   <li>
-		<a href="#tabs-4b" class="dropmenu-item">Activities engaged</a>
+		<a href="#tabs-4a" class="dropmenu-item">Activities engaged</a>
 	</li>
   <li>
-		<a href="#tabs-4c" class="dropmenu-item">Activities coordinated</a>
+		<a href="#tabs-4b" class="dropmenu-item">Activities coordinated</a>
 	</li>
   <li>
 		<a href="#tabs-4d" class="dropmenu-item">Seach for participants</a>
