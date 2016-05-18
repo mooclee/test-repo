@@ -42,16 +42,16 @@
 						
 							<tr>
 								<td class="tbl_header">
-									Position
+									Position:
 								</td>
 								<td>
-									Chairman
+									Chairman:
 								</td>
 							</tr>
 						
 							<tr>
 								<td class="tbl_header">
-									Duties
+									Duties:
 								</td>
 								<td>
 									<ul>
@@ -74,7 +74,7 @@
 									 Stamped:
 								</td>
 								<td>
-									2/2 (Done)
+									3/3 (Done)
 								</td>
 							</tr>
 							<tr>
@@ -82,8 +82,17 @@
 									Stamper(s):
 								</td>
 								<td>
-									Mrs. C Lee &nbsp;<span class="svg_container" svg="stamp" svgfill="black" svgsize="15"></span><br/>
-									David Wong &nbsp;<span class="svg_container" svg="stamp" svgfill="black" svgsize="15"></span><br/>
+									<ul>
+										<li>
+											<span class="stamper_header">Prof. David Jasper</span><span class="svg_container" svg="stamp" svgfill="black" svgsize="15"></span>
+										</li>
+										<li>
+											<span class="stamper_header">Mrs. C. Lee</span><span class="svg_container" svg="stamp" svgfill="black" svgsize="15"></span>
+										</li>
+										<li>
+											<span class="stamper_header">Bailey Sands</span><span class="svg_container" svg="stamp" svgfill="black" svgsize="15"></span>
+										</li>
+									</ul>
 								</td>
 							</tr>
 							
@@ -107,7 +116,7 @@
 							
 							<tr>
 								<td class="tbl_header">
-									Genetic skills:
+									G.S. score:
 								</td>
 								<td>
 									<ul>
@@ -126,7 +135,7 @@
 								
 							<tr>
 								<td class="tbl_header">
-									Open comments:
+									Comments:
 								</td>
 								<td>
 									Samson Chan is very active in the society. He always offers ideas to solve problems based on good information and sound judgment. He displays initiative and enthusiasm in leading the society. He also demonstrates excellent oral and written communication skills.
@@ -142,12 +151,30 @@
 
 	<tr>
 		<td>
-			<table>
+			<table class="layout_box" style="background:#f0f0f0">
 				<tr>
 					<td>
 						<b>Assessors</b>
 					</td>
 				</tr>
+				
+				<!--SEARCH BAR-->
+				<tr>
+					<td>
+						<table cellpadding="0" cellspacing="0" width="100%">
+							<tr>
+								<td style="width:100%">
+									<input class="search_box" style="width:100%" type="text" placeholder="Filter..." value=""/>
+								</td>
+								<td style="padding-left:5px">
+									<div class="svg_container" svg="search" style="position: relative; left: -40px; width:16px; height:16px; padding:8px; border-radius:8px; cursor:pointer;" svgfill="green">
+									</div>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				
 				<tr>
 					<td>
 						<table>
@@ -160,7 +187,7 @@
 												<img src="./people/p01.jpg" class="photo_home"/>
 											</td>
 											<td class="person_desc">
-												<b>Chole Madely</b><br/>
+												<b>Prof. David Jasper</b><br/>
 												Social Science<br/>
 												HKU<br/><br/>
 											</td>
@@ -182,7 +209,7 @@
 												<img src="./people/p02.jpg" class="photo_home"/>
 											</td>
 											<td class="person_desc">
-												<b>John Davis</b><br/>
+												<b>C. Lee</b><br/>
 												Psychology<br/>
 												HKU<br/><br/>
 											</td>
@@ -204,7 +231,7 @@
 												<img src="./people/p03.jpg" class="photo_home"/>
 											</td>
 											<td class="person_desc">
-												<b>Juliana Altimari</b><br/>
+												<b>Bailey Sands</b><br/>
 												Education<br/>
 												HKU<br/><br/>
 											</td>
@@ -229,10 +256,27 @@
 
 	<tr>
 		<td>
-			<table>
+			<table class="layout_box" style="background:#f0f0f0">
 				<tr>
 					<td>
 						<b>Participants</b>
+					</td>
+				</tr>
+
+				<!--SEARCH BAR-->
+				<tr>
+					<td>
+						<table cellpadding="0" cellspacing="0" width="100%">
+							<tr>
+								<td style="width:100%">
+									<input class="search_box" style="width:100%" type="text" placeholder="Filter..." value=""/>
+								</td>
+								<td style="padding-left:5px">
+									<div class="svg_container" svg="search" style="position: relative; left: -40px; width:16px; height:16px; padding:8px; border-radius:8px; cursor:pointer;" svgfill="green">
+									</div>
+								</td>
+							</tr>
+						</table>
 					</td>
 				</tr>
 				

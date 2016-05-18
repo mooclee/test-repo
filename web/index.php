@@ -20,9 +20,8 @@
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">	
-  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-
+<!--  <script src="//code.jquery.com/jquery-1.10.2.js"></script>-->
+<!--  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>-->
   <link href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" type="text/css" rel="stylesheet">
 	<link href="//ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/overcast/jquery-ui.css" type="text/css" rel="stylesheet" >
 <!--	
@@ -95,6 +94,9 @@
 								</td>
 								<td style="padding-left:2px">
 									<div class="svg_container" svg="search" style="position: relative; left: -40px; width:16px; height:16px; padding:4px; border-radius:8px; cursor:pointer;" svgfill="green"></div>
+								</td>
+								<td style="color:white; text-align:left; font-weight:bold; cursor:pointer">
+									Advanced
 								</td>
 							</tr>
 						</table>
@@ -198,19 +200,24 @@
 </table>
 
 <ul id="dropmenu_ocla" class="dropmenu">
-  <li>
+	<li>
 		<a href="#tabs-4c" class="dropmenu-item">Add an activity</a>
 	</li>
-  <li>
+	<li>
 		<a href="#tabs-4a" class="dropmenu-item">Activities engaged</a>
 	</li>
-  <li>
+	<li>
 		<a href="#tabs-4b" class="dropmenu-item">Activities coordinated</a>
 	</li>
-  <li>
+	<li>
 		<a href="#tabs-4d" class="dropmenu-item">Seach for participants</a>
 	</li>
 </ul>	
+
+<div id="dialog-confirm" title="Delete this item?" style="display:none">
+	<span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>
+		Are you sure?
+</div>
 
 </body>
 </html>

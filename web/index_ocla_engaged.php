@@ -151,7 +151,7 @@
 
 	<tr>
 		<td>
-			<table>
+			<table class="layout_box" style="background:#f0f0f0">
 				<tr>
 					<td>
 						<b>Assessors</b>
@@ -256,7 +256,7 @@
 
 	<tr>
 		<td>
-			<table>
+			<table class="layout_box" style="background:#f0f0f0">
 				<tr>
 					<td>
 						<b>Participants</b>

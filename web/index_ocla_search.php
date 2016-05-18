@@ -44,22 +44,16 @@
 				</tr>
 			</table>
 		</td>
-		<td>
+		<td width="200">
 			<table>
 				<tr>
 					<td>
-						<table>
-							<tr>
-								<td>
-									<img src="./activities/hkredcross.png" class="photo_home"/>
-								</td>
-							</tr>
-							<tr>
-								<td class="activity_name">
-									HK Red Cross
-								</td>
-							</tr>
-						</table>
+						<img src="./activities/hkredcross.png" class="photo_home"/>
+					</td>
+				</tr>
+				<tr>
+					<td class="activity_name">
+						HK Red Cross
 					</td>
 				</tr>
 			</table>
@@ -85,6 +79,20 @@
 					<td>
 						<button class="small_button">Message</button><br/>
 						<button class="small_button">Delete</button>
+					</td>
+				</tr>
+			</table>
+		</td>
+		<td width="200">
+			<table>
+				<tr>
+					<td>
+						<img src="./activities/cedars.png" class="photo_home"/>
+					</td>
+				</tr>
+				<tr>
+					<td class="activity_name">
+						Cedars Volunteers
 					</td>
 				</tr>
 			</table>

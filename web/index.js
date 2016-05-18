@@ -15,7 +15,7 @@ jQuery.fn.outerHTML = function(s){
 /////////////////////////////////////////////////////////////////
 
 function initAll(){
-	
+	//return;
 	// top buttons
 	$('.svg_container').each(function(){
 		var jobj = $(this),
@@ -61,6 +61,7 @@ function initAll(){
 	
 	// dropmenu
 	$('.dropmenu').menu().hide();
+	
 	$('#dropmenu_ocla	a').click(function(e){
 		var jobj = $(this);
 		var id = jobj.attr('href');
@@ -89,8 +90,6 @@ function initAll(){
 		autogrow: true,
 	});
 	
-	// editor
-	//$('.editor').trumbowyg('html', "<b>Internship 101</b> is a course for students to prepare their internship programme.");
 	
 	// combobox
 	$('.assessment_combobox').combobox();
@@ -105,12 +104,8 @@ function initAll(){
 	setBalloonNumber('todolist', 3);
 	setBalloonNumber('notice', 3);
 	setBalloonNumber('msg', 5);
-
+	
 	// TABS
-	//var starttab = 0;	// home
-	//var starttab = 1;	// profile
-	//var starttab = 2;	// network
-	//var starttab = 3;	// ocla
 	$("#tabs").tabs({
 		//active: starttab,
 		activate: function(event, ui){
@@ -126,11 +121,11 @@ function initAll(){
 					//event.stopPropagation();
 					$('#tabs-4a').show();
 					break;
-				default:
-					break;
+				//default:
 			}
 		}
 	});
+	
 	$('#tabs a')
 		.hover(function(){
 			var jobj = $(this);
@@ -140,7 +135,11 @@ function initAll(){
 					openDropmenu(jobj, 'ocla');
 					//event.stopPropagation();
 					break;
-				default:
+					
+				case '#tabs-1':
+				case '#tabs-2':
+				case '#tabs-3':
+				case '#tabs-5':
 					closeDropmenu();
 					break;
 			}
@@ -150,8 +149,17 @@ function initAll(){
 		//});
 	;
 	
-	// textarea
+	// autogrow
+	// http://www.technoreply.com/autogrow-textarea-plugin-3-0/
 	$('.ta_question').autoGrow();
+	
+	$('.but_trash').button({
+		text: false,
+		icons: {	primary: "ui-icon-trash"}
+	}).mouseup(function(){	// work for mobile too
+		onDelete(this);
+	});
+	
 	
 	$('#tbl_root').show();
 
@@ -159,8 +167,55 @@ function initAll(){
 	$("#tabs").tabs("option", "active", TAB_OCLA);
 	$('.ocla_page').hide();
 	$('#tabs-4c').show();
+}
 
-	
+/////////////////////////////////////////////////////////////////////////////////////
+
+function onDelete(but){
+	//if (confirm('Are you sure to delete this?')){
+    $( "#dialog-confirm" ).dialog({
+      resizable: false,
+      height:180,
+      modal: true,
+      buttons: {
+        "Yes": function() {
+          $( this ).dialog( "close" );
+					
+					var jbut = $(but),
+							jtd = jbut.parent(),
+							jtr = jtd.parent(),
+							jtbody = jtr.parent(),
+							jtrs = jtbody.find('tr'),
+							length = jtrs.length,
+							index = jtrs.index(jtr)
+					;
+					//console.debug(index, length);
+					if (index == length - 1){
+						jtr.find('textarea').val('').css('height', '');
+						jtr.find('div.autogrow-textarea-mirror').html('');
+					} else {
+						jtr.remove();
+					}
+
+					$('.div_details').each(function(){
+						var num = 1;
+						$(this).find('.assessment_num').each(function(){
+							$(this).text((num++) + '.');
+						});
+						var code = 65; // begin from A
+						$(this).find('.mcq_letter').each(function(){
+							$(this).text(String.fromCharCode(code++) + '.');
+						});
+					});
+				
+        },
+        Cancel: function() {
+          $( this ).dialog( "close" );
+        }
+      }
+    });		
+		
+	//}
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -192,16 +247,22 @@ function initAll(){
 		y = offset.top + jobj.height() + 11,
 		x = offset.left
 	;
-	if (jmenu.css('display') == 'none'){
+	var display = jmenu.css('display');
+	if (display == 'none')
+	{
 		jmenu.show().offset({left:x, top:y}).hide();
 		//jmenu.show().hide();
 		jmenu.fadeIn('swing');
+		//jmenu.show();
+	} else {
+		//jmenu.show();
 	}
  }
 
 //////////////////////////////////////////////////////////////////////
  
 function closeDropmenu(){
+	//console.trace('closeDropMenu')
 	$('.dropmenu').hide();
 }
 
@@ -227,5 +288,3 @@ function openDetails(obj){
 		//jtr.slideToggle();
 	});	// must be with div
 }
-
- 

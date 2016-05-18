@@ -262,9 +262,10 @@ button.medium_button{
 	position:absolute;
 	display:none;
 	background: white;
+	text-align: left;
 }
 a.dropmenu-item{
-	font-size:12px;
+	font-size: 12px;
 	background: white;
 }
 
@@ -277,7 +278,7 @@ a.dropmenu-item:hover{
 	border: 1px solid gray;
 }
 .assessment_datetime{
-	width: 110px;
+	width: 115px;
 }
 .header{
 	font-size: 14px;
@@ -303,15 +304,10 @@ a.dropmenu-item:hover{
 }
 textarea.ta_question{
 	padding:4px;
-	font-size:16px;
+	font-size:14px;
 	border-radius:6px;
 	width:99%;
 	resize: none;	
-}
-.div_details{
-	/*background:#e0e0e0;*/
-	border-radius:8px;
-	display:none;
 }
 .assessment_datetime{
 	border-radius:8px;
@@ -320,7 +316,6 @@ textarea.ta_question{
 .inp_text, .ui-widget-content, .assessment_datetime{
 	border:1px solid #c0c0c0;
 }
-
 
 .tbl_activity td{
 	font-size:12px;
@@ -361,11 +356,40 @@ textarea.ta_question{
 	display: inline-block;
 	width:155px;	
 }
+.assessment_spinner{
+	margin-right:0px;
+}
+.icon_button{
+	width: 28px;
+	height: 28px;
+}
+.ui-dialog .ui-dialog-titlebar-close span {
+   margin: -8px -8px;
+}
+
+.multiple_choice{
+	text-align:center;
+	width:70px;
+}
+.td_delete{
+	width:28px;
+}
+.mcq_letter{
+	width:10px;
+}
+.div_details{
+	/*background:#e0e0e0;*/
+	border-radius:8px;
+	display:none;
+}
 .tbl_details{
 	background:#e0e0e0;
 	border-radius:8px;
 	padding:4px;
 }
-.assessment_spinner{
-	margin-right:0px;
+
+.tbl_footbar{
+	background:#f0f0f0;
+	border-radius:8px;
+	width:100%;
 }

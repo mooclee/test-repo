@@ -196,6 +196,7 @@
 						</div>
 					</td>
 				</tr>
+<!--				
 				<tr>
 					<td>
 						<div class="layout_box">
@@ -278,6 +279,7 @@
 						</div>
 					</td>
 				</tr>
+-->				
 			</table>
 		</td>
 		
