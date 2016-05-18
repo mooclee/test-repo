@@ -80,6 +80,7 @@ function initAll(){
 				['bold', 'italic', 'underline', 'strikethrough'],
         ['superscript', 'subscript'],
         ['link'],
+        ['table'],
         ['insertImage'],
         'btnGrp-justify',
         'btnGrp-lists',
@@ -160,10 +161,18 @@ function initAll(){
 		onDelete(this);
 	});
 	
-	
-	$('#tbl_root').show();
+	// start page
+	$('.ocla_page').hide();
+	$("#tabs").tabs("option", "active", TAB_HOME);
 
-	// testing
+	// show pages
+	$('#tbl_root').show();
+	//return;
+	
+	///////////////////////
+	// TESTING
+	///////////////////////
+	// show tab
 	$("#tabs").tabs("option", "active", TAB_OCLA);
 	$('.ocla_page').hide();
 	$('#tabs-4c').show();

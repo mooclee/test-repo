@@ -15,7 +15,7 @@
 										<table>
 											<tr>
 												<td>
-													<b style="font-size:20px">Samson Chan</b><br/>Social Science Year 2 HKU
+													<b style="font-size:20px">Samson Chan</b><br/>Social Science Year 2 HKU Hong Kong
 												</td>
 											</tr>
 											<tr>
@@ -36,7 +36,7 @@
 				<tr>
 					<td>
 						<div class="layout_box">
-							Who has viewed your pofile?
+							<span class="layout_title">Who has viewed your pofile?</span>
 							<table>
 								<tr>
 									<td>
@@ -118,7 +118,7 @@
 				<tr>
 					<td>
 						<div class="layout_box">
-							Suggested to contact
+							<span class="layout_title">Suggested to contact</span>
 							<table>
 								<tr>
 									<td>

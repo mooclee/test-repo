@@ -11,7 +11,7 @@
 						<table cellpadding="0" cellspacing="0">
 							<tr>
 								<td>
-									<b style="font-size:20px">Samson Chan</b><br/>Social Science Year 2 HKU
+									<b style="font-size:20px">Samson Chan</b><br/>Social Science Year 2 HKU Hong Kong
 								</td>
 							</tr>
 							<tr>

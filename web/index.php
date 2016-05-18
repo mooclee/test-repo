@@ -27,7 +27,7 @@
 <!--	
 	<link href="//ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/redmond/jquery-ui.css" type="text/css" rel="stylesheet" >
 -->
-
+	<link rel="stylesheet" href="./font-awesome-4.6.3/css/font-awesome.min.css">
 
 	<script>
 		function load_script(path, s){
@@ -105,7 +105,7 @@
 						<table>
 							<tr>
 								<td>
-									<img id="bar_myphoto" src="./people/m03.jpg"/>
+									<img class="person_photo" src="./people/m03.jpg"/>
 								</td>
 								<td style="color:white; font-size:14px">
 									Samson Chan

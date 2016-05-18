@@ -86,27 +86,6 @@
 	</tr>
 	
 	<tr>
-		<td>
-			<table cellspacing="10" align="center">
-				<tr>
-					<td>
-						<button class="medium_button">Add by Excel</button>
-					</td>
-					<td>
-						<button class="medium_button">Add by CSV</button>
-					</td>
-					<td>
-						<button class="medium_button">Add by groups</button>
-					</td>
-					<td>
-						<button class="medium_button">Add by individuals</button>
-					</td>
-				</tr>
-			</table>
-		</td>
-	</tr>
-	
-	<tr>
 		<td width="100%">
 			<table cellpadding="0" cellspacing="0" width="100%">
 				<tr>
@@ -232,6 +211,27 @@
 		</td>
 	</tr>
 
+	<tr>
+		<td>
+			<table cellspacing="10" align="center">
+				<tr>
+					<td>
+						<button class="medium_button">Add by Excel</button>
+					</td>
+					<td>
+						<button class="medium_button">Add by CSV</button>
+					</td>
+					<td>
+						<button class="medium_button">Add by groups</button>
+					</td>
+					<td>
+						<button class="medium_button">Add by individuals</button>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	
 </table>
 
 

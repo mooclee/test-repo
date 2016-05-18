@@ -206,12 +206,6 @@ button.medium_button{
 .person_desc{
 	width:200px;
 }
-#bar_myphoto{
-	border-radius: 4px;
-	padding-left: 0px;
-	height: 22px;
-	border: 1px darkgreen solid;
-}
 .ui-menu .ui-menu-item {
 	padding:2px;
 	font-weight:normal;
@@ -393,3 +387,21 @@ textarea.ta_question{
 	border-radius:8px;
 	width:100%;
 }
+
+img.person_photo, span.person_photo svg{
+	width: 24px;
+	border-radius: 4px;
+/*	border: 1px darkgreen solid;*/
+}
+
+.tbl_skills td:nth-child(+3){
+	width:150px;
+}
+.tbl_skills td:nth-child(+4){
+	width:150px;
+}
+.layout_title{
+	font-weight:bold;
+	
+}
+
