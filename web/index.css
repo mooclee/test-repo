@@ -11,6 +11,7 @@ body{
 
 body, table{
 	font-size:14px;
+	vertical-align: top;
 }
 
 #tbl_root{
@@ -60,16 +61,17 @@ body, table{
 	width: 100%;
 }
 #profile_blocks li {
-	/*margin: 0 5px 5px 5px;*/
 	margin: 5px 0px;
 	padding: 5px;
 }
 #profile_blocks table{
 	background-color: white;
 }
+/*
 #profile_blocks .ui-state-default{
 	cursor:pointer;
 }
+*/
 .ui-state-highlight {
 	height: 1.5em;
 	line-height: 1.2em;
@@ -150,8 +152,7 @@ a:hover{
 .ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor, .ui-tabs .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor, .ui-tabs .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor {
 	outline: 0px solid transparent;/*cancel border in the tab*/
 }
-#tbl_skills td{
-}
+
 pre{
 	text-align:left;
 	white-space: pre-line;	
@@ -160,13 +161,15 @@ pre{
 #profile_blocks table{
 	border-radius:8px;
 	padding:0px 2px;
+	/* width: 100%; */
+	/* height: 100%; */
 }
 #profile_blocks li{
 	border-radius:8px;
 }
 #profile_blocks .ui-state-default{
 	border-radius:8px;
-	padding:5px;
+	/*padding:5px;*/
 }
 .msg_home{
 	vertical-align:top;
@@ -174,6 +177,7 @@ pre{
 }
 .profile_logo{
 	width:50px;
+	padding:10px;
 }
 .profile_desc{
 	vertical-align:top;
@@ -194,7 +198,7 @@ button.small_button{
 	background-color:#f8f8f8;
 	border-width:1px;
 }
-button.medium_button{
+button.medium_button, button.details_button{
 	border-radius:8px;
 	margin:3px;
 	font-size:14px;
@@ -203,6 +207,13 @@ button.medium_button{
 	padding:4px 6px;
 }
 
+button.medium_button{
+	min-width:120px;
+}
+
+button.details_button{
+	min-width:80px;
+}
 .person_desc{
 	width:200px;
 }
@@ -228,7 +239,7 @@ button.medium_button{
 	top: 0;
 	bottom: 0;
 	margin-left: -1px;
-	padding: 0;
+	padding: 0px;
 }
 .custom-combobox-input {
 	margin: 0;
@@ -257,6 +268,7 @@ button.medium_button{
 	display:none;
 	background: white;
 	text-align: left;
+	border-radius:8px;
 }
 a.dropmenu-item{
 	font-size: 12px;
@@ -271,6 +283,9 @@ a.dropmenu-item:hover{
 	padding:10px;
 	border: 1px solid gray;
 }
+.assessment_title{
+	width:180px;
+}
 .assessment_datetime{
 	width: 115px;
 }
@@ -284,11 +299,14 @@ a.dropmenu-item:hover{
 	color:black;
 	font-weight:normal;
 }
-.assessment_method input{
-	width:80px;
+.ui-widget-content a.ui-state-default{
+	height: 26px;
 }
-.assessment_assessor input{
-	width:80px;
+.assessment_method input{
+	width:110px;
+}
+.assessment_spinner{
+	width:25px;
 }
 .assessment_status input{
 	width:40px;
@@ -312,7 +330,7 @@ textarea.ta_question{
 }
 
 .tbl_activity td{
-	font-size:12px;
+	font-size: 14px;
 }
 .tbl_header{
 	font-weight:bold;
@@ -339,16 +357,13 @@ textarea.ta_question{
 	background-color:#b0b0b0;
 	width:20px;
 	color:white;
+	vertical-align: middle;
 }
 .skill_rating{
 	padding:4px;
 }
 .skill_rating2{
 	padding: 1px 5px;
-}
-.stamper_header{
-	display: inline-block;
-	width:155px;	
 }
 .assessment_spinner{
 	margin-right:0px;
@@ -375,6 +390,7 @@ textarea.ta_question{
 	/*background:#e0e0e0;*/
 	border-radius:8px;
 	display:none;
+	/* width: 900px; */
 }
 .tbl_details{
 	background:#e0e0e0;
@@ -393,15 +409,83 @@ img.person_photo, span.person_photo svg{
 	border-radius: 4px;
 /*	border: 1px darkgreen solid;*/
 }
-
-.tbl_skills td:nth-child(+3){
+/*
+.tbl_skills td:nth-child(+1){
 	width:150px;
 }
 .tbl_skills td:nth-child(+4){
-	width:150px;
+	width:200px;
+}
+*/
+
+.datatable td:nth-child(+5), .datatable td:nth-child(+6){
+	text-align:center;
 }
 .layout_title{
 	font-weight:bold;
-	
+}
+.editor{
+	background:white;
+}
+.text_box{
+	border:1px solid lightgray;
+	border-radius: 8px;
+	padding:10px;
+	text-align:justify;
+	background:white;
+}
+#cb_exp_name input{
+	width: 380px;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+	font-weight:normal;
+	color:black;
+}
+.ui-state-default .profile_header{
+	font-weight: bold;
+	color: #3383bb;
+	font-size: 14pt;
+	padding: 5px;
+	cursor:pointer;
+}
+.datatable thead td{
+	font-weight:bold;
+}
+.datatable tbody td{
+	vertical-align: top;
+}
+.stamper_header{
+	display: inline-block;
+	width: 180px;
 }
 
+.svg_container[svg=message]{
+	cursor: pointer;
+}
+.gray_bar{
+	padding:2px;
+	background:#e0e0e0;
+	border-radius:8px;
+	text-align:center; 	
+	background: #e0e0e0;
+}
+.lang_combobox{
+	width: 120px;
+	border-radius: 8px;
+	text-align: center;
+}
+.lang_combobox option{
+	text-align: center;
+}
+.lang_text{
+	width: 500px;
+}
+.td_minwords span.ui-spinner{
+	margin-left: 20px;
+}
+.yolox_engaged, .oclx_engaged, .oclx_coord, .display_page{
+	display:none;
+}
+#cb_exp_name_olcx input, #cb_exp_name_yolox input{
+	width:380px;
+}

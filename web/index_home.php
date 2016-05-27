@@ -9,17 +9,19 @@
 							<table>
 								<tr>
 									<td valign="top">
-										<img src="./people/m03.jpg" class="photo_myself" style="padding-left:0px"/>
+										<img src="./people/m03.jpg" class="photo_myself" style="padding-top:40px"/>
 									</td>
 									<td valign="top">
 										<table>
 											<tr>
 												<td>
-													<b style="font-size:20px">Samson Chan</b><br/>Social Science Year 2 HKU Hong Kong
+													<b style="font-size:20px">Samson Chan</b><br/>Social Science Year 2<br/>
+													The University of Hong Kong, Hong Kong
 												</td>
 											</tr>
 											<tr>
 												<td>
+													<u>Skills Table</u><br/>
 													<?php include 'index_skills_table.php'?>
 												</td>
 											</tr>
@@ -36,7 +38,7 @@
 				<tr>
 					<td>
 						<div class="layout_box">
-							<span class="layout_title">Who has viewed your pofile?</span>
+							<span class="layout_title">Who has viewed your profile?</span>
 							<table>
 								<tr>
 									<td>
@@ -118,7 +120,7 @@
 				<tr>
 					<td>
 						<div class="layout_box">
-							<span class="layout_title">Suggested to contact</span>
+							<span class="layout_title">Suggested to network</span>
 							<table>
 								<tr>
 									<td>
@@ -298,9 +300,9 @@
 							<tr>
 								<td colspan="2">
 									<ul>
-										<li>Fill in survey form.</li>
+										<li>Fill in survey form</li>
 										<li>Import contacts for network</li>
-										<li>Write comment to activities</li>
+										<li>Write comment for activities</li>
 									</ul>
 								</td>
 							</tr>
@@ -319,9 +321,7 @@
 							<tr>
 								<td colspan="2">
 									<ul>
-										<li>Hong Kong History</li>
-										<li>Law in Hong Kong</li>
-										<li>Politics</li>
+										<li>MYocle monthly bonus GS questionaire</li>
 									</ul>
 								</td>
 							</tr>

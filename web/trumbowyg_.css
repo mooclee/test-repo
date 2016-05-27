@@ -28,33 +28,29 @@
   height: 100%;
   fill: #222; }
 
+.trumbowyg-box{
+	border-radius: 8px;		
+}
+	
 .trumbowyg-box,
 .trumbowyg-editor {
   display: block;
   position: relative;
   border: 1px solid #DDD;
   width: 100%;
-  min-height: 300px;
-  margin: 17px auto; }
+  /*min-height: 300px;*/
+  /* margin: 17px auto; */
+  }
 
 .trumbowyg-box .trumbowyg-editor {
-  margin: 0 auto; }
+  margin: 0 auto;
+  background: white;
+  }
 
 .trumbowyg-box.trumbowyg-fullscreen {
   background: #FEFEFE;
   border: none !important; }
 
-.trumbowyg-editor,
-.trumbowyg-textarea {
-  position: relative;
-  box-sizing: border-box;
-  padding: 20px;
-  min-height: 300px;
-  width: 100%;
-  border-style: none;
-  resize: none;
-  outline: none;
-  overflow: auto; }
 
 .trumbowyg-box-blur .trumbowyg-editor *, .trumbowyg-box-blur .trumbowyg-editor::before {
   color: transparent !important;
@@ -70,6 +66,42 @@
 .trumbowyg-box-blur .trumbowyg-editor hr {
   opacity: 0.2; }
 
+	.trumbowyg-button-pane {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  width: 100%;
+  min-height: 36px;
+  background: #ecf0f1;
+  border-bottom: 1px solid #d7e0e2;
+  margin: 0;
+  padding: 0 5px;
+  list-style-type: none;
+  line-height: 10px;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+}
+.trumbowyg-editor,
+.trumbowyg-textarea {
+  position: relative;
+  box-sizing: border-box;
+	padding:10px;
+  width: 100%;
+  border-style: none;
+  resize: none;
+  outline: none;
+  overflow: auto; 
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+	
+}
+
 .trumbowyg-textarea {
   position: relative;
   display: block;
@@ -78,7 +110,8 @@
   white-space: normal;
   font-size: 14px;
   font-family: "Inconsolata", "Consolas", "Courier", "Courier New", sans-serif;
-  line-height: 18px; }
+  line-height: 18px; 
+}
 
 .trumbowyg-box.trumbowyg-editor-visible .trumbowyg-textarea {
   height: 1px !important;
@@ -103,24 +136,6 @@
   color: #999;
   pointer-events: none; }
 
-.trumbowyg-button-pane {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  width: 100%;
-  min-height: 36px;
-  background: #ecf0f1;
-  border-bottom: 1px solid #d7e0e2;
-  margin: 0;
-  padding: 0 5px;
-  list-style-type: none;
-  line-height: 10px;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden; }
   .trumbowyg-button-pane::after {
     content: " ";
     display: block;

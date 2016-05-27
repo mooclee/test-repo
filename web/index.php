@@ -1,3 +1,34 @@
+<?php
+$method_arr = Array(
+	'Abstract', ///Dissertation/Essay/Reviews',
+	'Application',///Report',
+	'Blog',
+	'Case Study',
+	'Concept Map',
+	'Journal',///Daily or Weekly Logbooks',
+	'Learning contract',
+	'MCQ',
+	'Participation',
+	'Porfolio',
+	'Poster',
+	'Presentation',
+	'Reflective Piece',
+	'Survey',
+	'Wikis'
+);
+function getSelectMethod($selected){
+	global $method_arr;
+	$s = '<div class="ui-widget assessment_method">' . '<select class="assessment_combobox">';
+	for ($i = 0; $i < sizeof($method_arr); $i++){
+		$name = $method_arr[$i];
+		$option_selected = $selected == $name ? ' selected' : ''; 
+		$s .= '<option'.$option_selected.'>'.$name.'</option>';
+	}
+	$s .= '</select></div>';
+	return $s;
+}
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -19,17 +50,15 @@
 	<link rel="manifest" href="/manifest.json">
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-	<meta name="theme-color" content="#ffffff">	
+	<meta name="theme-color" content="#ffffff">
+<!--	<script src="./jquery-2.2.4.js"></script>-->
 <!--  <script src="//code.jquery.com/jquery-1.10.2.js"></script>-->
 <!--  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>-->
   <link href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" type="text/css" rel="stylesheet">
 	<link href="//ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/overcast/jquery-ui.css" type="text/css" rel="stylesheet" >
-<!--	
-	<link href="//ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/redmond/jquery-ui.css" type="text/css" rel="stylesheet" >
--->
-	<link rel="stylesheet" href="./font-awesome-4.6.3/css/font-awesome.min.css">
-
+	<link rel="stylesheet" href="./font-awesome-4.6.3/css/font-awesome.min.css">	
 	<script>
+///*	
 		function load_script(path, s){
 			if (s) path += '?d=' + s;
 			s = '<script src="' + path + '" type="text/javascript"><\/script>';
@@ -56,16 +85,29 @@
 			s = '';	// testing only
 		}
 		// Development loader
-		var cssfiles = 'jquery.datetimepicker.css index.css trumbowyg.css',
-				jqueryfiles = 'jquery-1.10.2.js jquery-ui-1.11.4.js jquery.ba-resize.js trumbowyg.js jquery.datetimepicker.full.js jquery.autogrowtextarea.js autocomplete_combo.js',
-				jsfiles = 'index.js svg.js'
+		var cssfiles = ''
+											+ 'jquery.datetimepicker.css jquery.dataTables.min.css index.css '
+											+ 'jquery.dataTables.min.css '
+											+ 'Trumbowyg-2.1.0/dist/ui/trumbowyg.css Trumbowyg-2.1.0/dist/plugins/colors/ui/trumbowyg.colors.css'
+											
+				,jqueryfiles = ''
+											+ 'jquery-2.2.4.js '
+											+ 'jquery-ui-1.11.4.js '
+											+ 'jquery.ba-resize.js jquery.datetimepicker.full.js jquery.autogrowtextarea.js autocomplete_combo.js '
+											+ 'jquery.dataTables.min.js '
+											+ 'Trumbowyg-2.1.0/dist/trumbowyg.js Trumbowyg-2.1.0/dist/plugins/colors/trumbowyg.colors.js Trumbowyg-2.1.0/dist/plugins/upload/trumbowyg.upload.js ' 
+											+ 'Trumbowyg-2.1.0/dist/plugins/pasteimage/trumbowyg.pasteimage.js Trumbowyg-2.1.0/dist/plugins/preformatted/trumbowyg.preformatted.js'
+											
+				,jsfiles = ''
+											+ 'index.js svg.js'
 		;
+		
 		[cssfiles, jqueryfiles, jsfiles].forEach(function(files){
 			if (files){
 				files.split(' ').forEach(function(file){
 					if (file.indexOf('.css') > 0){
 						load_css('./'+file, s);
-					} else {
+					} else if (file.indexOf('.js') > 0){
 						load_script('./'+file, s);
 					}
 				})
@@ -74,7 +116,10 @@
 		window.onload = function(){
 			initAll();
 		}
+//*/		
 	</script>
+
+	
 </head>
 <body>
  <table id="tbl_root">
@@ -152,10 +197,16 @@
 						<a href="#tabs-3">Networks</a>
 					</li>
 					<li>
-						<a href="#tabs-4a" style="cursor: pointer">OCLA</a>
+						<a href="#tabs-4a" style="cursor: pointer">OCL-X</a>
 					</li>
 					<li>
-						<a href="#tabs-5">Post a Project</a>
+						<a href="#tabs-5a" style="cursor: pointer">YOLO-X</a>
+					</li>
+					<li>
+						<a href="#tabs-6">Post a Project</a>
+					</li>
+					<li>
+						<a href="#tabs-7">GS League Table</a>
 					</li>
 				</ul>
 				
@@ -174,24 +225,48 @@
 					<?php include 'index_network.php'?>
 				</div>
 				
+				<!-- OCL-X -->
 				<div id="tabs-4a" class="ocla_page ui-tabs-panel ui-widget-content ui-corner-bottom">
-					<?php include 'index_ocla_engaged.php'?>
+					<?php include 'index_oclx_add.php'?>
 				</div>
 
 				<div id="tabs-4b" class="ocla_page ui-tabs-panel ui-widget-content ui-corner-bottom">
-					<?php include 'index_ocla_coordinated.php'?>
+					<?php include 'index_oclx_engaged.php'?>
 				</div>
 
 				<div id="tabs-4c" class="ocla_page ui-tabs-panel ui-widget-content ui-corner-bottom">
-					<?php include 'index_ocla_add.php'?>
+					<?php include 'index_oclx_coordinated.php'?>
 				</div>
 
 				<div id="tabs-4d" class="ocla_page ui-tabs-panel ui-widget-content ui-corner-bottom">
-					<?php include 'index_ocla_search.php'?>
+					<?php include 'index_oclx_search.php'?>
+				</div>
+
+				<!-- YOLO-X -->
+				<div id="tabs-5a" class="ocla_page ui-tabs-panel ui-widget-content ui-corner-bottom">
+					<?php include 'index_yolox_add.php'?>
+				</div>
+
+				<div id="tabs-5b" class="ocla_page ui-tabs-panel ui-widget-content ui-corner-bottom">
+					<?php include 'index_yolox_engaged.php'?>
+				</div>
+
+				<div id="tabs-5c" class="ocla_page ui-tabs-panel ui-widget-content ui-corner-bottom">
+					<?php include 'index_yolox_search.php'?>
+				</div>
+
+				<div id="tabs-5d" class="ocla_page ui-tabs-panel ui-widget-content ui-corner-bottom">
+					<?php include 'index_yolox_stamper.php'?>
 				</div>
 				
-				<div id="tabs-5">
+				<!-- POST A PROJECT-->
+				<div id="tabs-6">
 					<?php include 'index_postaproject.php'?>
+				</div>
+				
+				<!-- GS LEAGUE TABLE-->
+				<div id="tabs-7">
+					<?php //include 'index_gsleaguetable.php'?>
 				</div>
 			</div>
 		</td>
@@ -201,16 +276,33 @@
 
 <ul id="dropmenu_ocla" class="dropmenu">
 	<li>
-		<a href="#tabs-4c" class="dropmenu-item">Add an activity</a>
+		<a href="#tabs-4a" class="dropmenu-item">Add an OCL-X</a>
 	</li>
 	<li>
-		<a href="#tabs-4a" class="dropmenu-item">Activities engaged</a>
+		<a href="#tabs-4b" class="dropmenu-item">OCL-X engaged</a>
 	</li>
 	<li>
-		<a href="#tabs-4b" class="dropmenu-item">Activities coordinated</a>
+		<a href="#tabs-4c" class="dropmenu-item">OCL-X coordinated</a>
 	</li>
 	<li>
 		<a href="#tabs-4d" class="dropmenu-item">Seach for participants</a>
+	</li>
+</ul>	
+
+<ul id="dropmenu_yolox" class="dropmenu">
+	<li>
+		<a href="#tabs-5a" class="dropmenu-item">Add a YOLO-X</a>
+	</li>
+	<li>
+		<a href="#tabs-5b" class="dropmenu-item">YOLO-X engaged</a>
+	</li>
+<!--	
+	<li>
+		<a href="#tabs-5c" class="dropmenu-item">Seach for participants</a>
+	</li>
+-->	
+	<li>
+		<a href="#tabs-5d" class="dropmenu-item">YOLO-X stamper</a>
 	</li>
 </ul>	
 

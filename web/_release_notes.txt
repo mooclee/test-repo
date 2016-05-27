@@ -1,0 +1,21 @@
+20060523
+	- added abstract
+	- added blog
+	- added participation
+	- added reflective
+
+20160520
+	- added getSelectMethod
+	- added methods
+		- abstract
+		- blog
+		- mcq
+		- participation
+		- reflective piece
+		- survey
+		
+20160519
+	- toolbar
+		- added group
+		- added image
+
