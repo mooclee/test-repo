@@ -108,6 +108,8 @@
 				if ( valid ) {
 					return;
 				}
+				
+				return; // added by alantypoon
 
 				// Remove invalid value
 				this.input

@@ -2,13 +2,13 @@
 <table cellspacing="0" cellpadding="5" width="100%" class="layout_box">
 	<tr>
 		<td>
-			<b>YOLO-X Stamper</b>
+			<b>OCL-X Assessor</b>
 		</td>
 	</tr>
-	
 	<tr>
 		<td>
 		
+			<!--DATATABLE-->
 			<table class="datatable" style="width:100%">
 
 				<thead>
@@ -39,13 +39,13 @@
 				
 					<tr>
 						<td>
-							Experiential Learning 2016
+							Experience Taiwan and South Korea
 						</td>
 						<td>
-							15 May 2016
+							8 Jul 2012
 						</td>
 						<td>
-							30 May 2016
+							8 Aug 2012
 						</td>
 						<td>
 							Stamped
@@ -57,77 +57,77 @@
 							Invited
 						</td>
 						<td>
-							<button class="details_button" onclick="togglePage('#div_yolox_stamp1')">Stamp</button>
+							<button class="details_button" onclick="togglePage('#div_oclx_assessor1')">Assess</button>
 						</td>
 					</tr>
 				
 					<tr>
 						<td>
-							Parachute Diving
+							Post-earthquake Visit to Sichuan
 						</td>
 						<td>
-							17 Jul 2016
+							8 Aug 2008
 						</td>
 						<td>
-							31 Jul 2016
+							8 Sep 2012
 						</td>
 						<td>
 							Stamped
 						</td>
 						<td align="center">
-							35/45
+							45/45
 						</td>
 						<td>
 							Invited
 						</td>
 						<td>
-							<button class="details_button" onclick="togglePage('#div_yolox_stamp2')">Stamp</button>
+							<button class="details_button" onclick="togglePage('#div_oclx_assessor2')">Assess</button>
 						</td>
 					</tr>
 					
 					<tr>
 						<td>
-							Volunteer & Community Service
+							Team Lead in Science Society
 						</td>
 						<td>
 							15 May 2016
 						</td>
 						<td>
-							31 Jul 2016
+							15 Jun 2016
 						</td>
 						<td>
 							Stamped
 						</td>
 						<td align="center">
-							30/38
+							38/38
 						</td>
 						<td>
 							Invited
 						</td>
 						<td>
-							<button class="details_button" onclick="togglePage('#div_yolox_stamp3')">Stamp</button>
+							<button class="details_button" onclick="togglePage('#div_oclx_assessor3')">Assess</button>
 						</td>
 					</tr>
 					
 				</tbody>
 				
 			</table>
-		
 		</td>
 	</tr>
 </table>
 
-<!--YOLO1-->
-<div id="div_yolox_stamp1" class="display_page">
-	<?php $title='Experiential Learning 2016'; $date='15 May 2016'; include "./assess.php"?>
+<!--OCLX 1-->
+<div id="div_oclx_assessor1" class="display_page">
+	<?php $title='Experience Taiwan and South Korea'; $date='8 Jul 2012'; include "./assess.php"?>
 </div>
 
-<!--YOLO2-->
-<div id="div_yolox_stamp2" class="display_page">
-	<?php $title='Parachute Diving'; $date='17 Jul 2016'; include "./assess.php"?>
+<!--OCLX 2-->
+<div id="div_oclx_assessor2" class="display_page">
+	<?php $title='Post-earthquake Visit to Sichuan'; $date='8 Aug 2008'; include "./assess.php"?>
 </div>
 
-<!--YOLO3-->
-<div id="div_yolox_stamp3" class="display_page">
-	<?php $title='Volunteer & Community Service'; $date='15 May 2015'; include "./assess.php"?>
+<!--OCLX 3-->
+<div id="div_oclx_assessor3" class="display_page">
+	<?php $title='Team Lead in Science Society'; $date='15 May 2016'; include "./assess.php"?>
 </div>
+

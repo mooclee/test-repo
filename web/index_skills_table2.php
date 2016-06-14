@@ -18,7 +18,7 @@
 		</td>
 		<td style="text-align:right; width:150px">
 			<img class="person_photo" src="./people/p02.jpg"/>
-			<img class="person_photo" src="./people/f01.jpg"/>
+			<img class="person_photo" src="./people/f02.jpg"/>
 			<span class="person_photo svg_container" svg="user"></span>
 		</td>
 		<td width="1">
@@ -32,7 +32,7 @@
 			<table>
 				<tr>
 					<td>
-						<div class="skill_rating">8</div>
+						<div class="skill_rating">9</div>
 					</td>
 					<td>
 						<span class="svg_container" svg="stamp" svgfill="black" svgsize="15"></span>
@@ -57,7 +57,7 @@
 			<table>
 				<tr>
 					<td>
-						<div class="skill_rating">5</div>
+						<div class="skill_rating">8</div>
 					</td>
 					<td>
 						<span class="svg_container" svg="stamp" svgfill="black" svgsize="15"></span>
@@ -82,7 +82,7 @@
 			<table>
 				<tr>
 					<td>
-						<div class="skill_rating">4</div>
+						<div class="skill_rating">7</div>
 					</td>
 					<td>
 						<span class="svg_container" svg="stamp" svgfill="black" svgsize="15"></span>
@@ -100,5 +100,55 @@
 			&nbsp;
 		</td>
 	</tr>
-								
+
+	<tr>
+		<td nowrap>Communication</td>
+		<td width="1">
+			<table>
+				<tr>
+					<td>
+						<div class="skill_rating">6</div>
+					</td>
+					<td>
+						<span class="svg_container" svg="stamp" svgfill="black" svgsize="15"></span>
+					</td>
+				</tr>
+			</table>
+		</td>
+		<td style="text-align:right">
+			<img class="person_photo" src="./people/p05.jpg"/>
+			<img class="person_photo" src="./people/f07.jpg"/>
+			<img class="person_photo" src="./people/f08.jpg"/>
+			<img class="person_photo" src="./people/m05.jpg"/>
+		</td>
+		<td>
+			<a class="fa fa-chevron-right"></a>
+		</td>
+	</tr>
+
+	<tr>
+		<td nowrap>Collaboration</td>
+		<td width="1">
+			<table>
+				<tr>
+					<td>
+						<div class="skill_rating">6</div>
+					</td>
+					<td>
+						<span class="svg_container" svg="stamp" svgfill="black" svgsize="15"></span>
+					</td>
+				</tr>
+			</table>
+		</td>
+		<td style="text-align:right">
+			<img class="person_photo" src="./people/p06.jpg"/>
+			<img class="person_photo" src="./people/m01.jpg"/>
+			<img class="person_photo" src="./people/f09.jpg"/>
+			<img class="person_photo" src="./people/f02.jpg"/>
+		</td>
+		<td>
+			<a class="fa fa-chevron-right"></a>
+		</td>
+	</tr>
+	
 </table>

@@ -9,16 +9,24 @@
 						<table border="0">
 							<tr>
 								<td style="text-align:center">
-									<b>Status</b>
+									<b>GS Status</b>
 								</td>
 							</tr>
 							<tr>
+<!--							
 								<td class="svg_container" svg="star" svgfill="#cd7f32" title="Status">
 								</td>												
+-->
+								<td>
+									<div>
+										<canvas class="status_gauge" style="width:125px" user="<?=$user?>"></canvas>
+										<div class="preview-textfield"><?=$status?></div>
+									</div>
+								</td>
 							</tr>
 							<tr>
 								<td style="text-align:center; ">
-									Bronze
+									<?=$rank?>
 								</td>
 							</tr>
 						</table>
@@ -38,7 +46,7 @@
 							</tr>
 							<tr>
 								<td class="networks_num">
-									128
+									<?=$network?>
 								</td>
 							</tr>
 						</table>

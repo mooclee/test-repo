@@ -82,6 +82,147 @@ GCSI aims to enhance Social Sciences students' awareness of the importance of As
 	
 </table>
 
+
+<table cellspacing="0" cellpadding="5" width="100%" class="layout_box">
+	<tr>
+		<td>
+			<b>Skills to be developed</b>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<table id="tbl_gskills" align="left" width="100%">
+				<thead>
+					<td width="160">
+						Genetic Skills
+					</td>
+					<td width="100">
+						Overall weight%
+					</td>
+					<td>
+						Assessment 1 weight%
+					</td>
+					<td>
+						Assessment 2 weight%
+					</td>
+					<td>
+						Assessment 3 weight%
+					</td>
+					<td>
+						Assessment 4 weight%
+					</td>
+					<td>
+						Assessment 5 weight%
+					</td>
+					<td>
+						Assessment 6 weight%
+					</td>
+					<td>
+						&nbsp;
+					</td>
+				</thead>
+				<tr>
+					<td>
+						<?=getSelectSkill('Organization')?>
+					</td>
+					<td>
+						<input class="assessment_spinner" value="40" style="width:25px"/>
+					</td>
+					<td>
+						<input class="assessment_spinner" value="40" style="width:25px"/>
+					</td>
+					<td>
+						<input class="assessment_spinner" value="40" style="width:25px"/>
+					</td>
+					<td>
+						<input class="assessment_spinner" value="40" style="width:25px"/>
+					</td>
+					<td>
+						<input class="assessment_spinner" value="40" style="width:25px"/>
+					</td>
+					<td>
+						<input class="assessment_spinner" value="40" style="width:25px"/>
+					</td>
+					<td>
+						<input class="assessment_spinner" value="40" style="width:25px"/>
+					</td>
+					<td>
+						<button class="icon_button but_trash"></button>
+					</td>					
+				</tr>
+				<tr>
+					<td>
+						<?=getSelectSkill('Communication')?>
+					</td>
+					<td>
+						<input class="assessment_spinner" value="30" style="width:25px"/>
+					</td>
+					<td>
+						<input class="assessment_spinner" value="40" style="width:25px"/>
+					</td>
+					<td>
+						<input class="assessment_spinner" value="40" style="width:25px"/>
+					</td>
+					<td>
+						<input class="assessment_spinner" value="40" style="width:25px"/>
+					</td>
+					<td>
+						<input class="assessment_spinner" value="40" style="width:25px"/>
+					</td>
+					<td>
+						<input class="assessment_spinner" value="40" style="width:25px"/>
+					</td>
+					<td>
+						<input class="assessment_spinner" value="40" style="width:25px"/>
+					</td>
+					<td>
+						<button class="icon_button but_trash"></button>
+					</td>					
+				</tr>
+				<tr>
+					<td>
+						<?=getSelectSkill('Teamwork')?>
+					</td>
+					<td>
+						<input class="assessment_spinner" value="30" style="width:25px"/>
+					</td>
+					<td>
+						<input class="assessment_spinner" value="40" style="width:25px"/>
+					</td>
+					<td>
+						<input class="assessment_spinner" value="40" style="width:25px"/>
+					</td>
+					<td>
+						<input class="assessment_spinner" value="40" style="width:25px"/>
+					</td>
+					<td>
+						<input class="assessment_spinner" value="40" style="width:25px"/>
+					</td>
+					<td>
+						<input class="assessment_spinner" value="40" style="width:25px"/>
+					</td>
+					<td>
+						<input class="assessment_spinner" value="40" style="width:25px"/>
+					</td>
+					<td>
+						<button class="icon_button but_trash"></button>
+					</td>					
+				</tr>
+				<tr>
+					<td colspan="99">
+						&nbsp;
+					</td>
+				</tr>
+				<tr>
+					<td colspan="99" style="text-align:center">
+						<button class="medium_button">Add skill</button>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
 <table cellspacing="0" cellpadding="5" width="100%" class="layout_box">
 	<tr>
 		<td colspan="2">

@@ -24,7 +24,7 @@
 		</div>
 	</td>
 	<td>
-		<button class="details_button" onclick="toggleDetails(this)">Details</button>
+		<button class="details_button" onclickx="toggleDetails(this)">Details</button>
 	</td>
 	<td>
 		<button class="icon_button but_trash"></button>

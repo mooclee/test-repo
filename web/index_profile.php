@@ -5,13 +5,14 @@
 			<table cellpadding="0" cellspacing="0" width="100%" class="layout_box" style="padding:2px 8px">
 				<tr>
 					<td style="padding:0px 0px; width:200px; text-align:center;">
-						<img id="profile_myphoto" class="photo_myself" src="./people/m03.jpg">
+						<img id="profile_myphoto" class="photo_myself" src="./people/m03.jpg" style="margin-top:40px">
 					</td>
 					<td valign="top" style="padding-right:10px;">
 						<table cellpadding="0" cellspacing="0" width="100%">
 							<tr>
 								<td>
-									<b style="font-size:20px">Samson Chan</b><br/>Social Science Year 2<br/>The University of Hong Kong, Hong Kong									
+									<b class="name_myself" style="font-size:20px">Samson Chan</b><br/>
+									<span class="curriculum_myself">Social Science Year 2</span><br/>The University of Hong Kong, Hong Kong									
 								</td>
 							</tr>
 							<tr>
@@ -23,7 +24,7 @@
 						</table>						
 					</td>
 					<td width="100">
-						<?php include 'index_status.php'?>
+						<?php $user="samson"; $status = '3.6'; $network = '128'; $rank = 'Bronze'; include 'index_status.php'?>
 					</td>
 				</tr>
 				<tr>
@@ -75,7 +76,7 @@
 											Aug 2013
 										</td>
 										<td width="32">
-											<span class="svg_container" svg="edit" svgfill="#000000" svgsize="32" title="Edit this experience" style="cursor:pointer"></span>
+											<span class="svg_container" svg="edit" svgfill="#000000" svgsize="24" title="Edit this experience" style="cursor:pointer"></span>
 										</td>
 									</tr>
 									
@@ -145,9 +146,7 @@ Red Cross is the ideal service organization for a HKU student; it requires commi
 									</tr>
 								</table>
 								
-								<div style="height:10px">
-									&nbsp;
-								</div>
+								<div class="separator2"></div>
 								
 								<div id="div_add_exp">
 								
@@ -167,18 +166,22 @@ Red Cross is the ideal service organization for a HKU student; it requires commi
 														</td>
 														<td>
 															<b>Name of experience:</b>
-															<span id="cb_exp_name_olcx" class="ui-widget">
+															<span id="cb_exp_name_oclx" class="ui-widget">
 																<select class="profile_combobox">
+<!--																
 																	<option value="1">Beyond Our Borders: Experience Taiwan and South Korea</option>
-																	<option value="2">Team Lead in Science Society 2016</option>
-																	<option value="3">My Experience in Post-earthquake Visit to Sichuan</option>
+																	<option value="2">My Experience in Post-earthquake Visit to Sichuan</option>
+																	<option value="3">Team Lead in Science Society 2016</option>
+-->																	
 																</select>
 															</span>
 															<span id="cb_exp_name_yolox" class="ui-widget" style="display:none">
 																<select class="profile_combobox">
+<!--																
 																	<option value="4">Experiential Learning 2016</option>
 																	<option value="5">Parachute Diving</option>
-																	<option value="6">25 Days in  a Foreign Country</option>
+																	<option value="6">Community service at Stocklerbridge Hospital</option>
+-->																	
 																</select>
 															</span>
 														</td>
@@ -189,11 +192,27 @@ Red Cross is the ideal service organization for a HKU student; it requires commi
 										
 										<tr>
 											<td>
-												<table style="background:#e0e0e0" cellpadding="0" cellspacing="0">
+												<table style="background:#e0e0e0" cellpadding="5" cellspacing="5">
 													<tr>
 														<td colspan="2">
 															<b>Description:</b>
-															<div id="div_profile_desc" class="text_box"></div>
+															<div style="text-align:center">
+																<table>
+																	<tr>
+																		<td colspan="2">
+																			<img id="img_profile_desc" style="width:100%"/>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<div id="video_profile_desc"></div>
+																		</td>
+																		<td>
+																			<div id="div_profile_desc" class="text_box"></div>
+																		</td>
+																	</tr>
+																</table>
+															</div>
 														</td>
 													</tr>
 												</table>
@@ -254,7 +273,6 @@ Red Cross is the ideal service organization for a HKU student; it requires commi
 				</li>
 				
 				<!--WORK EXPERIENCE-->
-				
 				<li class="ui-state-default">
 					<table width="100%">
 						<tr>
@@ -277,7 +295,7 @@ Red Cross is the ideal service organization for a HKU student; it requires commi
 											- Filing and data entry<br/>
 										</td>
 										<td width="32">
-											<span class="svg_container" svg="edit" svgfill="#000000" svgsize="32" title="Edit this experience" style="cursor:pointer"></span>
+											<span class="svg_container" svg="edit" svgfill="#000000" svgsize="24" title="Edit this experience" style="cursor:pointer"></span>
 										</td>
 									</tr>
 								</table>
@@ -293,7 +311,7 @@ Red Cross is the ideal service organization for a HKU student; it requires commi
 					<table width="100%">
 						<tr>
 							<td class="profile_header ui-state-default">
-								Academic Qualifications
+								Education
 							</td>
 						</tr>
 						<tr>
@@ -308,7 +326,7 @@ Red Cross is the ideal service organization for a HKU student; it requires commi
 											The University of Hong Kong<br/> 2014 - Present
 										</td>
 										<td width="32">
-											<span class="svg_container" svg="edit" svgfill="#000000" svgsize="32" title="Edit this experience" style="cursor:pointer"></span>
+											<span class="svg_container" svg="edit" svgfill="#000000" svgsize="24" title="Edit this experience" style="cursor:pointer"></span>
 										</td>
 									</tr>
 								</table>
@@ -332,7 +350,7 @@ Red Cross is the ideal service organization for a HKU student; it requires commi
 											2008 - 2014
 										</td>
 										<td width="32">
-											<span class="svg_container" svg="edit" svgfill="#000000" svgsize="32" title="Edit this experience" style="cursor:pointer"></span>
+											<span class="svg_container" svg="edit" svgfill="#000000" svgsize="24" title="Edit this experience" style="cursor:pointer"></span>
 										</td>
 									</tr>
 								</table>

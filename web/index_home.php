@@ -9,13 +9,13 @@
 							<table>
 								<tr>
 									<td valign="top">
-										<img src="./people/m03.jpg" class="photo_myself" style="padding-top:40px"/>
+										<img src="./people/m03.jpg" class="photo_myself" style="margin-top:40px"/>
 									</td>
 									<td valign="top">
 										<table>
 											<tr>
 												<td>
-													<b style="font-size:20px">Samson Chan</b><br/>Social Science Year 2<br/>
+													<b class="name_myself" style="font-size:20px">Samson Chan</b><br/><span class="curriculum_myself">Social Science Year 2</span><br/>
 													The University of Hong Kong, Hong Kong
 												</td>
 											</tr>
@@ -28,7 +28,7 @@
 										</table>
 									</td>
 									<td>
-										<?php include 'index_status.php'?>
+										<?php $user="samson"; $status = '3.6'; $network = '128'; $rank = 'Bronze'; include 'index_status.php'?>
 									</td>
 								</tr>
 							</table>
@@ -39,7 +39,7 @@
 					<td>
 						<div class="layout_box">
 							<span class="layout_title">Who has viewed your profile?</span>
-							<table>
+							<table class="tbl_chole">
 								<tr>
 									<td>
 										<table>
@@ -198,90 +198,6 @@
 						</div>
 					</td>
 				</tr>
-<!--				
-				<tr>
-					<td>
-						<div class="layout_box">
-							Groups belong to
-							<table>
-								<tr>
-									<td>
-									<td>
-										<table>
-											<tr>
-												<td>
-													<img src="./activities/hkredcross.png" class="photo_home"/>
-												</td>
-											</tr>
-											<tr>
-												<td class="activity_name">
-													HK Red Cross
-												</td>
-											</tr>
-										</table>
-									</td>
-									<td>
-										<table>
-											<tr>
-												<td>
-													<img src="./activities/history.jpg" class="photo_home"/>
-												</td>
-											</tr>
-											<tr>
-												<td class="activity_name">
-													History Tutorial
-												</td>
-											</tr>
-										</table>
-									</td>
-									<td>
-										<table>
-											<tr>
-												<td>
-													<img src="./activities/usastudytour.jpg" class="photo_home"/>
-												</td>
-											</tr>
-											<tr>
-												<td class="activity_name">
-													USA Study Tour
-												</td>
-											</tr>
-										</table>
-									</td>
-									<td>
-										<table>
-											<tr>
-												<td>
-													<img src="./activities/boardgameclub.jpg" class="photo_home"/>
-												</td>
-											</tr>
-											<tr>
-												<td class="activity_name">
-													Board Game Club
-												</td>
-											</tr>
-										</table>
-									</td>
-									<td>
-										<table>
-											<tr>
-												<td>
-													<img src="./activities/cedars.png" class="photo_home"/>
-												</td>
-											</tr>
-											<tr>
-												<td class="activity_name">
-													Cedars Volunteers
-												</td>
-											</tr>
-										</table>
-									</td>
-								</tr>
-							</table>
-						</div>
-					</td>
-				</tr>
--->				
 			</table>
 		</td>
 		
