@@ -1,4 +1,4 @@
-<table width="100%" class="layout_box" style="background:#e0e0e0; width:400px">
+<table width="100%" class="layout_box tbl_modal" style="width:400px">
 	<thead>
 		<tr>
 			<td id="stp_title" style="font-weight:bold">

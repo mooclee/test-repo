@@ -1,4 +1,4 @@
-<table width="100%" class="layout_box" style="background:#e0e0e0">
+<table width="100%" class="layout_box tbl_modal">
 	<tr>
 		<td>
 			<table>

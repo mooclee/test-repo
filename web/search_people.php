@@ -1,10 +1,10 @@
-<table width="100%" class="layout_box" style="background:#e0e0e0">
+<table width="100%" class="layout_box tbl_modal">
 	<tr>
 		<td>
 			<table cellspacing="10">
 				<tr>
 					<td>
-						<?php $placheolder = 'Find people in my activities...';include "searchbar.php"?>								
+						<?php $id="inp_findpeopleinmyact"; $placheolder = 'Find people in my activities';include "searchbar.php"?>								
 					</td>
 				</tr>
 				<tr>
