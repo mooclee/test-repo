@@ -2,34 +2,50 @@
 	<tr>
 		<!--COL#1-->
 		<td valign="top" width="700">
-			<table cellspacing="0" cellpadding="0" width="100%">
+			<table cellspacing="0" cellpadding="3" width="100%">
 				<tr>
 					<td>
 						<div class="layout_box">
 							<table>
 								<tr>
-									<td valign="top">
-										<img src="./people/m03.jpg" class="photo_myself" style="margin-top:40px"/>
+									<td valign="top" align="middle">
+									
+										<img src="./people/m03.jpg" class="photo_myself" style="padding-top:4px; padding-left:4px"/>
+						
+										<?php //$user="samson"; $status = '3.8'; $network = '128'; $rank = 'Bronze'; include 'index_status_samson.php'?>
+										<?php $id="1"; include 'index_status.php'?>
+																					
 									</td>
+									
 									<td valign="top">
-										<table>
+									
+										<table cellspacing="4">
+										
 											<tr>
-												<td>
-													<b class="name_myself" style="font-size:20px">Samson Chan</b><br/><span class="curriculum_myself">Social Science Year 2</span><br/>
+												<td style="border-radius:8px; border:2px solid #e0e0e0; padding:8px;">
+													<b class="name_myself" style="font-size:20px">Samson Chan</b>
+													<br/><span class="curriculum_myself">Social Science Year 2</span><br/>
 													The University of Hong Kong, Hong Kong
 												</td>
 											</tr>
+											
 											<tr>
-												<td>
-													<u>Skills Table</u><br/>
-													<?php include 'index_skills_table.php'?>
+												<td align="center">
+													<div style="border-radius:8px; border:2px solid #e0e0e0; padding-top:10px">
+														<canvas id="canvas_samson1" width="517" height="300"></canvas>
+													</div>
 												</td>
 											</tr>
+
+											<tr>
+												<td>
+													<table id="tbl_gs_samson1" class="tbl_gs" style="width:527px; border-radius:8px; border:2px solid #e0e0e0" cellspacing="0" cellpadding="2"></table>
+												</td>
+											</tr>											
+											
 										</table>
 									</td>
-									<td>
-										<?php $user="samson"; $status = '3.6'; $network = '128'; $rank = 'Bronze'; include 'index_status.php'?>
-									</td>
+									
 								</tr>
 							</table>
 						</div>
@@ -38,7 +54,7 @@
 				<tr>
 					<td>
 						<div class="layout_box">
-							<span class="layout_title">Who has viewed your profile?</span>
+							<span class="layout_title text_whohasviewed">Who has viewed your profile?</span>
 							<table class="tbl_chole">
 								<tr>
 									<td>
@@ -50,7 +66,7 @@
 											</tr>
 											<tr>
 												<td class="person_name">
-													Chole Madely
+													Chloe Madely
 												</td>
 											</tr>
 										</table>
@@ -120,7 +136,7 @@
 				<tr>
 					<td>
 						<div class="layout_box">
-							<span class="layout_title">Suggested to network</span>
+							<span class="layout_title text_suggestedtontwk">Suggested to network</span>
 							<table>
 								<tr>
 									<td>
@@ -203,13 +219,13 @@
 		
 		<!--COL#2-->
 		<td valign="top" width="300">
-			<table cellspacing="0" cellpadding="0" width="100%" border="0">
+			<table cellspacing="0" cellpadding="5" width="100%" border="0">
 				<tr>
 					<td style="padding-right:10px">
 						<table class="layout_box" width="100%">
 							<tr>
 								<td class="svg_container" svg="pin" style="width:16px" svgfill="black" svgsize="16"></td>
-								<td valign="middle">
+								<td class="text_todolist" valign="middle">
 									To do list
 								</td>
 							</tr>
@@ -230,7 +246,7 @@
 						<table class="layout_box" width="100%" style="">
 							<tr>
 								<td class="svg_container" svg="notice" style="width:16px" svgfill="black" svgsize="16"></td>
-								<td valign="middle">
+								<td class="text_noticeboard" valign="middle">
 									Notice board
 								</td>
 							</tr>
@@ -250,7 +266,7 @@
 						<table class="layout_box" width="100%" style="">
 							<tr>
 								<td class="svg_container" svg="message" style="width:16px" svgfill="black" svgsize="16"></td>
-								<td valign="middle">
+								<td valign="middle" class="text_msg">
 									Message
 								</td>
 							</tr>
@@ -262,7 +278,7 @@
 												<img src="./people/f01.jpg" class="photo_msg_preview" valign="top">
 											</td>
 											<td class="msg_home">
-												<b>Chole Madely</b><br/>Nice to meet you in HK Red Cross.								
+												<b>Chloe Madely</b><br/>Nice to meet you in HK Red Cross.								
 											</td>
 										</tr>
 									</table>
@@ -328,13 +344,31 @@
 					</td>
 				</tr>
 				<tr>
-					<td align="center">
-						<a href="">About</a>&nbsp;&nbsp;
-						<a href="">Help</a>&nbsp;&nbsp;
-						<a href="">Feedback</a>&nbsp;&nbsp;
-						<a href="">Privacy & Terms</a><br/>
-						<span style="color:gray">YOCLE &copy; 2016</span>
-						
+					<td id="td_footer" align="center">
+						<table cellspacing="4">
+							<tr>
+								<td>
+									<a href="">About</a>
+								</td>
+								<td>
+									<a href="">Help</a>
+								</td>
+								<td>
+									<a href="">Feedback</a>
+								</td>
+								<td>
+									<a href="">Privacy</a>
+								</td>
+								<td>
+									<a href="">Terms</a><br/>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="5" align="center">
+									<span style="color:gray">YOCLE &copy; 2016</span>
+								</td>
+							</tr>
+						</table>
 					</td>
 				</tr>
 			</table>

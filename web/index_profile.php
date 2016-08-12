@@ -1,38 +1,51 @@
 
-<table cellspacing="0" cellpadding="0" width="100%">
+<table cellspacing="4" cellpadding="4" width="100%">
 	<tr>
 		<td>
-			<table cellpadding="0" cellspacing="0" width="100%" class="layout_box" style="padding:2px 8px">
+			<table cellpadding="4" cellspacing="4" width="100%" class="layout_box" style="padding:2px 8px">
 				<tr>
-					<td style="padding:0px 0px; width:200px; text-align:center;">
-						<img id="profile_myphoto" class="photo_myself" src="./people/m03.jpg" style="margin-top:40px">
+					<td style="width:1px; text-align:center; padding-top:4px" valign="top">
+						<img id="profile_myphoto" class="photo_myself" src="./people/m03.jpg">
+						<?php $id="2"; include 'index_status.php'?>
+						
 					</td>
+					
 					<td valign="top" style="padding-right:10px;">
-						<table cellpadding="0" cellspacing="0" width="100%">
+						<table cellpadding="0" cellspacing="4" width="100%">
+							
 							<tr>
-								<td>
-									<b class="name_myself" style="font-size:20px">Samson Chan</b><br/>
-									<span class="curriculum_myself">Social Science Year 2</span><br/>The University of Hong Kong, Hong Kong									
+								<td style="border-radius:8px; border:2px solid #e0e0e0; padding:8px;">
+									<b class="name_myself" style="font-size:20px">Samson Chan</b>
+									<br/><span class="curriculum_myself">Social Science Year 2</span><br/>
+									The University of Hong Kong, Hong Kong
+								</td>
+							</tr>							
+							
+							<tr>
+								<td align="center">
+									<div style="border-radius:8px; border:2px solid #e0e0e0; padding:10px">
+										<canvas id="canvas_samson2" width="600" height="300"></canvas>
+									</div>
 								</td>
 							</tr>
+							
 							<tr>
 								<td>
-									<br/><b>Skills Table</b><br/>
-									<?php include 'index_skills_table.php'?>
+									<table id="tbl_gs_samson2" class="tbl_gs" style="width:100%; border-radius:8px; border:2px solid #e0e0e0" cellspacing="0" cellpadding="2"></table>
 								</td>
-							</tr>
+							</tr>											
+			
 						</table>						
 					</td>
-					<td width="100">
-						<?php $user="samson"; $status = '3.6'; $network = '128'; $rank = 'Bronze'; include 'index_status.php'?>
-					</td>
+
 				</tr>
+<!--				
 				<tr>
 					<td colspan="4" style="padding-bottom:5px">
 						<table width="100%">
 							<tr>
 								<td>
-									<b>Personal Statement and Objectives</b>
+									<b class="text_personal">Personal Statement and Objectives</b>
 								</td>
 							</tr>
 							<tr>
@@ -44,24 +57,115 @@
 						</table>
 					</td>
 				</tr>
-				
+-->				
 			</table>
 		</td>
 	</tr>
 	<tr>
 		<td>
 			<ul id="profile_blocks">
+			
+				<li class="ui-state-default">
+					<?php include "index_profile_objectives.php"?>
+				</li>
+			
+				<li class="ui-state-default">
+					<?php include "index_profile_oclx.php"?>
+				</li>
+				
+				<li class="ui-state-default">
+					<?php include "index_profile_yolox.php"?>
+				</li>
+				
+<!--			
+				<li class="ui-state-default">
+					<table width="100%">
+						<tr>
+							<td class="profile_header ui-state-default">
+								Comments
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<table id="tbl_comment" width="100%" class="datatable">
+									<thead>
+										<tr>
+											<td>
+												Activity
+											</td>
+											<td>
+												Assessment
+											</td>
+											<td>
+												Assessor
+											</td>
+											<td>
+												Comment
+											</td>
+											<td>
+											</td>
+										</tr>
+									</thead>
+									<tbody>
+									
+										<tr>
+											<td>
+												Post-earthquake Visit to Sichuan
+											</td>
+											<td>
+												Self Reflective
+											</td>
+											<td>
+												Prof. David Jasper
+											</td>
+											<td>
+												Excellent work! Samson captured the essence of the activity and shows deep analytical thoughts on the cultural differences.
+											</td>
+											<td>
+												<div class="toggle_comment toggle-light"></div>												
+											</td>
+										</tr>
+										
+										<tr>
+											<td>
+												Team Lead in Science Society
+											</td>
+											<td>
+												Overseas Experience
+											</td>
+											<td>
+												Marianna Chan
+											</td>
+											<td>
+												Samson has outstanding team-building skills. He builds a team-oriented attitude among all his committee members and he an extraordinary ability to turn a group into a team.
+											</td>
+											<td>
+												<div class="toggle_comment toggle-light"></div>												
+											</td>
+										</tr>
+										
+									</tbody>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</li>
+			
 				<li class="ui-state-default">
 					<table width="100%">
 					
-						<!--TITLE-->
 						<tr>
-							<td class="profile_header ui-state-default">
+							<td class="profile_header ui-state-default text_extracur">
 								Extra-curricular Activities / Projects
 							</td>
 						</tr>
 						
-						<!--EXPERIENCE #1-->
+						<tr>
+							<td class="profile_header ui-state-default text_extracur">
+								OCL-X
+							</td>
+						</tr>
+						
 						<tr>
 							<td>
 								<table width="100%">
@@ -75,16 +179,12 @@
 											Hong Kong Red Cross<br/>
 											Aug 2013
 										</td>
-										<td width="32">
-											<span class="svg_container" svg="edit" svgfill="#000000" svgsize="24" title="Edit this experience" style="cursor:pointer"></span>
-										</td>
 									</tr>
 									
 									<tr>
 										<td colspan="3">
 											<b>Post-earthquake Visit to Sichuan</b>
 											<div class="text_box">Whether it be internationally or locally, the HKRC is without fail always willing to lend a helping hand and show support no matter what the situation. I can surely tell you that this organization has been making a difference and will continue to make a difference to the world for years to come. Simply being a part of the HKRC stands for leaves me speechless everyday.
-
 Red Cross is the ideal service organization for a HKU student; it requires commitment and attendance, while meetings are efficient and very organized. Not only that, but it is possible to find a service activity for so many different interests, both on and off campus. Walking into a meeting, you will find a diverse group of students, but we all have one thing in common: we love to serve, and we are all genuinely nice people!
 											</div>
 										</td>
@@ -101,31 +201,85 @@ Red Cross is the ideal service organization for a HKU student; it requires commi
 									<tr>
 										<td style="padding-right:10px; width:700px">
 											<div style="width:100%">
-												<b>Skills Developed Table:</b>
+												<b class="text_skilldevtbl">Skills Developed Table</b>
 												<?php include 'index_skills_table.php'?>
 											</div>
 										</td>
 										
 										<td valign="top">
-											<b>Privacy Options:</b>
+											<b class="text_privopt">Privacy Options</b>
 											<table style="width:100%; height:100%; border:1px solid #e0e0e0; margin-top:8px;">
 												<tr>
 													<td>
-														<input type="radio" name="profile_priv" checked disabled />Public
+														<input type="radio" name="profile_priv" checked  /><span class="text_public"></span>
 													</td>
 												</tr>
 												<tr>
 													<td>
-														<input type="radio" name="profile_priv" disabled />Only shown to network
+														<input type="radio" name="profile_priv"  /><span class="text_onlyntwk"></span>
 													</td>
 												</tr>
 												<tr>
 													<td>
-														<input type="radio" name="profile_priv" disabled />Private
+														<input type="radio" name="profile_priv"  /><span class="text_private"></span>
 													</td>
 												</tr>
 											</table>
 													
+										</td>
+									</tr>
+									<tr>
+										<td colspan="2">
+											<div style="width:100%">
+												<b class="">Comments</b>
+												<table id="tbl_comment2" class="datatable">
+													<thead>
+														<tr>
+															<td>
+																Date
+															</td>
+															<td>
+																Assessor
+															</td>
+															<td>
+																Comment
+															</td>
+															<td>
+															</td>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>
+																28 Aug 2014
+															</td>
+															<td>
+																Prof. John Smith
+															</td>
+															<td>
+																Excellent! Samson participated and contributed in the whole activity and he has very good communication skills with the citizens there.
+															</td>
+															<td>
+																<div class="toggle_comment toggle-light"></div>
+															</td>
+														</tr>
+														<tr>
+															<td>
+																29 Aug 2014
+															</td>
+															<td>
+																Mary McCleen
+															</td>
+															<td>
+																Samson understood his role very well. One cannot be a good follower unless he has clearly identified the leader. While one may be a leader in his own realm, everyone has a boss—including you. Great followers not only accept this fact but embrace it.
+															</td>
+															<td>
+																<div class="toggle_comment toggle-light" ></div>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
 										</td>
 									</tr>
 								</table>
@@ -134,7 +288,6 @@ Red Cross is the ideal service organization for a HKU student; it requires commi
 						</tr>
 							
 
-						<!--ADD EXPERIENCE-->
 						<tr>
 							<td>
 							
@@ -156,7 +309,7 @@ Red Cross is the ideal service organization for a HKU student; it requires commi
 												<table style="background:#e0e0e0">
 													<tr>
 														<td width="300">
-															<b>Experience from:</b>
+															<b class="text_expfrom">Experience from</b>:
 															<span id="cb_profile_activity" class="ui-widget">
 																<select class="profile_combobox">		
 																	<option selected>OCL-X</option>
@@ -165,23 +318,13 @@ Red Cross is the ideal service organization for a HKU student; it requires commi
 															</span>
 														</td>
 														<td>
-															<b>Name of experience:</b>
+															<b class="text_nameofexp">Name of experience</b>:
 															<span id="cb_exp_name_oclx" class="ui-widget">
 																<select class="profile_combobox">
-<!--																
-																	<option value="1">Beyond Our Borders: Experience Taiwan and South Korea</option>
-																	<option value="2">My Experience in Post-earthquake Visit to Sichuan</option>
-																	<option value="3">Team Lead in Science Society 2016</option>
--->																	
 																</select>
 															</span>
 															<span id="cb_exp_name_yolox" class="ui-widget" style="display:none">
 																<select class="profile_combobox">
-<!--																
-																	<option value="4">Experiential Learning 2016</option>
-																	<option value="5">Parachute Diving</option>
-																	<option value="6">Community service at Stocklerbridge Hospital</option>
--->																	
 																</select>
 															</span>
 														</td>
@@ -195,7 +338,7 @@ Red Cross is the ideal service organization for a HKU student; it requires commi
 												<table style="background:#e0e0e0" cellpadding="5" cellspacing="5">
 													<tr>
 														<td colspan="2">
-															<b>Description:</b>
+															<b class="text_desc">Description</b>:
 															<div style="text-align:center">
 																<table>
 																	<tr>
@@ -226,27 +369,27 @@ Red Cross is the ideal service organization for a HKU student; it requires commi
 													
 														<td style="padding-right:10px; width:700px">
 															<div>
-																<b>Skills Developed Table:</b>
+																<b class="text_skilldevtbl">Skills Developed Table</b>
 																<?php include 'index_skills_table.php'?>
 															</div>
 														</td>
 														
 														<td valign="top">
-															<b>Privacy Options:</b>
+															<b class="text_privopt">Privacy Options</b>
 															<table style="width:100%; height:100%; margin-top:8px;">
 																<tr>
 																	<td>
-																		<input id="addexp_priv1" type="radio" name="addexp_priv" checked />Public
+																		<input id="addexp_priv1" type="radio" name="addexp_priv" checked /><span class="text_public"></span>
 																	</td>
 																</tr>
 																<tr>
 																	<td>
-																		<input type="radio" name="addexp_priv"/>Only shown to network
+																		<input type="radio" name="addexp_priv"/><span class="text_onlyntwk"></span>
 																	</td>
 																</tr>
 																<tr>
 																	<td>
-																		<input type="radio" name="addexp_priv"/>Private
+																		<input type="radio" name="addexp_priv"/><span class="text_private"></span>
 																	</td>
 																</tr>
 															</table>
@@ -271,12 +414,13 @@ Red Cross is the ideal service organization for a HKU student; it requires commi
 						
 					</table>
 				</li>
+-->				
 				
 				<!--WORK EXPERIENCE-->
 				<li class="ui-state-default">
 					<table width="100%">
 						<tr>
-							<td class="profile_header ui-state-default">
+							<td class="profile_header ui-state-default text_workexp">
 								Work Experience
 							</td>
 						</tr>
@@ -310,7 +454,7 @@ Red Cross is the ideal service organization for a HKU student; it requires commi
 				<li class="ui-state-default">
 					<table width="100%">
 						<tr>
-							<td class="profile_header ui-state-default">
+							<td class="profile_header ui-state-default text_edu">
 								Education
 							</td>
 						</tr>
@@ -372,7 +516,7 @@ Red Cross is the ideal service organization for a HKU student; it requires commi
 				<li class="ui-state-default">
 					<table width="100%">
 						<tr>
-							<td class="profile_header ui-state-default">
+							<td class="profile_header ui-state-default text_interests">
 								Interests
 							</td>
 						</tr>
@@ -394,8 +538,8 @@ Red Cross is the ideal service organization for a HKU student; it requires commi
 				<li class="ui-state-default">
 					<table width="100%">
 						<tr>
-							<td class="profile_header ui-state-default">
-								Lanugage Skills
+							<td class="profile_header ui-state-default text_langskills">
+								Language Skills
 							</td>
 						</tr>
 						<tr>
@@ -403,13 +547,13 @@ Red Cross is the ideal service organization for a HKU student; it requires commi
 								<table width="100%">
 								
 									<thead>
-										<td class="tbl_header" style="width:50%">
+										<td class="tbl_header text_language" style="width:50%">
 											Language
 										</td>
-										<td class="tbl_header" style="width:25%; text-align:center">
+										<td class="tbl_header text_spoken" style="width:25%; text-align:center">
 											Spoken
 										</td>
-										<td class="tbl_header" style="width:25%; text-align:center">
+										<td class="tbl_header text_written" style="width:25%; text-align:center">
 											Written
 										</td>
 									</thead>
@@ -494,9 +638,8 @@ Red Cross is the ideal service organization for a HKU student; it requires commi
 						
 						<tr>
 							<td colspan="3">
-								<b>Comment:</b><br/>
-								<!--<div contenteditable="true" class="text_box" onclick='$(this).focus();'>Japanese test</div>-->
-								<textarea class="text_box" style="width:900px; resize: none;">Japanese test</textarea>
+								<b class="text_comments">Comments</b>:<br/>
+								<textarea class="text_box" style="width:900px; height:20px; resize: none;" rows="1">Japanese test</textarea>
 <!--								
 								<div class="gray_bar">
 									<button class="medium_button">Save</button>
@@ -511,7 +654,7 @@ Red Cross is the ideal service organization for a HKU student; it requires commi
 				<li class="ui-state-default">
 					<table width="100%">
 						<tr>
-							<td class="profile_header ui-state-default">
+							<td class="profile_header ui-state-default text_awards">
 								Awards
 							</td>
 						</tr>
@@ -537,7 +680,7 @@ Red Cross is the ideal service organization for a HKU student; it requires commi
 				<li class="ui-state-default">
 					<table width="100%">
 						<tr>
-							<td class="profile_header ui-state-default">
+							<td class="profile_header ui-state-default text_publications">
 								Publications
 							</td>
 						</tr>
@@ -555,6 +698,7 @@ Red Cross is the ideal service organization for a HKU student; it requires commi
 						</tr>
 					</table>
 				</li>
+				
 			</ul>		
 		</td>
 	</tr>

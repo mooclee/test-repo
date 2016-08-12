@@ -1,62 +1,34 @@
 <?php
-$method_arr = Array(
-	'Abstract', ///Dissertation/Essay/Reviews',
-	'Application',///Report',
-	'Blog',
-	'Case Study',
-	'Concept Map',
-	'Journal',///Daily or Weekly Logbooks',
-	'Learning contract',
-	'MCQ',
-	'Participation',
-	'Porfolio',
-	'Poster',
-	'Presentation',
-	'Reflective Piece',
-	'Survey',
-	'Wikis'
-);
-function getSelectMethod($selected){
-	global $method_arr;
-	$s = '<div class="ui-widget assessment_method">' . '<select class="assessment_combobox">';
-	for ($i = 0; $i < sizeof($method_arr); $i++){
-		$name = $method_arr[$i];
-		$option_selected = $selected == $name ? ' selected' : ''; 
-		$s .= '<option'.$option_selected.'>'.$name.'</option>';
+include "common.php";
+
+$email = isset($_COOKIE['email']) ? $_COOKIE['email'] : '';
+$pwd = isset($_COOKIE['pwd']) ? $_COOKIE['pwd'] : '';
+$login = isset($_COOKIE['login']) ? $_COOKIE['login'] : '';
+
+$redirect = 1;
+if ($email != '' && $pwd != '' && $login == '1'){
+	$manager = new MongoDB\Driver\Manager("mongodb://mongodb:27017");
+	$query = new MongoDB\Driver\Query(['email'=>$email, 'pwd'=>$pwd], []);	// filter, options
+	$res = $manager->executeQuery("$database.users", $query);
+	$documents = $res->toArray();
+	$found = sizeof($documents);
+	if ($found){
+		$user = $documents[0];
+		if ($user->confirmed_email){
+			echo "<script>var g_user = " . json_encode($user) . ";</script>";
+			$redirect = 0;
+		} else {
+			// not confirmed yet
+		}
 	}
-	$s .= '</select></div>';
-	return $s;
 }
-
-///////////////////////////////////////////////////////////////////////////////
-
-$skill_arr = Array(
-	'Collaboration',
-	'Communication',
-	'Creativity',
-	'Critical Thinking',
-	'Information Technology',
-	'Leadingship',
-	'Numeracy',
-	'Organization',
-	'Problem Solving',
-	'Self-management',
-	'Study',
-	'Teamwork',
-);
-function getSelectSkill($selected){
-	global $skill_arr;
-	$s = '<div class="ui-widget assessment_skill">' . '<select class="skill_combobox">';
-	for ($i = 0; $i < sizeof($skill_arr); $i++){
-		$name = $skill_arr[$i];
-		$option_selected = $selected == $name ? ' selected' : ''; 
-		$s .= '<option'.$option_selected.'>'.$name.'</option>';
-	}
-	$s .= '</select></div>';
-	return $s;
+//$redirect = 1;
+if ($redirect){
+	header("Location: ./login.php");
+	die();
 }
-
 ?>
+
 
 <!doctype html>
 <html lang="en">
@@ -118,7 +90,8 @@ function getSelectSkill($selected){
 											+ 'jquery.datetimepicker.css index.css '
 											+ 'jquery.dataTables.css toggles.css star-rating-svg.css '
 											+ 'Trumbowyg-2.1.0/dist/ui/trumbowyg.css Trumbowyg-2.1.0/dist/plugins/colors/ui/trumbowyg.colors.css '
-											+ 'uniform.aristo.css font-awesome-4.6.3/css/font-awesome.css'
+											+ 'uniform.aristo.css font-awesome-4.6.3/css/font-awesome.css '
+											+ 'buttons.dataTables.css'
 											
 				,jqueryfiles = ''
 											+ 'jquery-2.2.4.js '
@@ -126,10 +99,14 @@ function getSelectSkill($selected){
 											+ 'jquery.ba-resize.js jquery.datetimepicker.full.js jquery.autogrowtextarea.js autocomplete_combo.js '
 											+ 'jquery.dataTables.js toggles.js jquery.star-rating-svg.js autosize.js gauge.js jquery.uniform.min.js '
 											+ 'Trumbowyg-2.1.0/dist/trumbowyg.js Trumbowyg-2.1.0/dist/plugins/colors/trumbowyg.colors.js Trumbowyg-2.1.0/dist/plugins/upload/trumbowyg.upload.js ' 
-											+ 'Trumbowyg-2.1.0/dist/plugins/pasteimage/trumbowyg.pasteimage.js Trumbowyg-2.1.0/dist/plugins/preformatted/trumbowyg.preformatted.js'
+											+ 'Trumbowyg-2.1.0/dist/plugins/pasteimage/trumbowyg.pasteimage.js Trumbowyg-2.1.0/dist/plugins/preformatted/trumbowyg.preformatted.js '
+											+ 'Trumbowyg-2.1.0/dist/plugins/noembed/trumbowyg.noembed.js '
+											+ 'buttons.print.js dataTables.buttons.js '
 											
 				,jsfiles = ''
-											+ 'index.js svg.js data.js'
+											+ 'svg.js data.js lang.js '
+											+ 'index.js index_common.js jquery-radar-plus.js '
+											+ 'index_home.js index_profile.js index_network.js index_activity_create.js index_activity_search.js Chart.bundle.js RadarChart.js '
 		;
 		
 		[cssfiles, jqueryfiles, jsfiles].forEach(function(files){
@@ -164,14 +141,16 @@ function getSelectSkill($selected){
 						<table cellpadding="0" cellspacing="0">
 							<tr>
 								<td>
-									<input id="inp_search" class="search_box" type="text" placeholder="Search people or activities..."/>
+									<input id="inp_search" class="search_box" type="text" placeholder="Search people or activities"/>
 								</td>
 								<td style="padding-left:2px">
 									<div class="svg_container" svg="search" style="position: relative; left: -30px; width:16px; height:16px; border-radius:8px; cursor:pointer; padding-top: 7px; " svgfill="green"></div>
 								</td>
-								<td style="color:white; text-align:left; font-weight:bold; cursor:pointer">
+<!--								
+								<td style="color:white; text-align:left; font-weight:bold; cursor:pointer" class="text_advanced">
 									Advanced
 								</td>
+-->								
 							</tr>
 						</table>
 					</td>
@@ -182,12 +161,12 @@ function getSelectSkill($selected){
 									<img class="person_photo photo_myself2" src="./people/m03.jpg"/>
 								</td>
 								<td class="name_myself" style="color:white; font-size:14px">
-									Samson Chan
+									<?=$user->name?>
 								</td>
 							</tr>
 						</table>
 					</td>
-					<td align="right" width="280">
+					<td align="right" width="300">
 						<table cellspacing="0" id="top_panel" border="0">
 							<tr>
 								<td id="topmenu_settings" class="svg_container topmenu_btn" svg="settings" title="Settings">
@@ -198,11 +177,13 @@ function getSelectSkill($selected){
 								<td id="topmenu_notice" class="svg_container topmenu_btn" svg="notice" title="Notice board">
 									<div class="balloon"><div class="balloon2"></div></div>
 								</td>
-								<td id="topmenu_msg" class="svg_container topmenu_btn" svg="message" title="Message">
+								<td id="topmenu_msg" class="svg_container topmenu_btn" svg="message" title="Message" onclick="openMsg('')">
 									<div class="balloon"><div class="balloon2"></div></div>
 								</td>
-								<td id="logout" class="svg_container topmenu_btn" svg="logout" title="Log out" onclick="toggleMyUser()">
+								<td id="topmenu_lang" class="svg_container topmenu_btn" svg="language" title="Language" svgsize="18" style="padding-top:8px" onclick="openDropmenu($(this), 'lang', event);">
+									<div class="balloon"><div class="balloon2"></div></div>
 								</td>
+								<td id="topmenu_logout" class="svg_container topmenu_btn" svg="logout" title="Log out"></td>
 							</tr>
 						</table>
 					</td>
@@ -228,14 +209,6 @@ function getSelectSkill($selected){
 					<li>
 						<a href="#tabs-8b">Activity</a>
 					</li>
-<!--					
-					<li>
-						<a href="#tabs-4a" style="cursor: pointer">OCL-X</a>
-					</li>
-					<li>
-						<a href="#tabs-5a" style="cursor: pointer">YOLO-X</a>
-					</li>
--->					
 					<li>
 						<a href="#tabs-6">Post a Project</a>
 					</li>
@@ -259,38 +232,7 @@ function getSelectSkill($selected){
 					<?php include 'index_network.php'?>
 					<?php include "index_profile_chole.php"?>					
 				</div>
-				
-<?php
-/*
-				<div id="tabs-4a" class="ocla_page ui-tabs-panel ui-widget-content ui-corner-bottom">
-					<?php include 'index_oclx_add.php'?>
-				</div>
-				<div id="tabs-4b" class="ocla_page ui-tabs-panel ui-widget-content ui-corner-bottom">
-					<?php include 'index_oclx_engaged.php'?>
-				</div>
-				<div id="tabs-4c" class="ocla_page ui-tabs-panel ui-widget-content ui-corner-bottom">
-					<?php include 'index_oclx_coordinated.php'?>
-				</div>
-				<div id="tabs-4d" class="ocla_page ui-tabs-panel ui-widget-content ui-corner-bottom">
-					<?php include 'index_oclx_assessor.php'?>
-				</div>
-				<div id="tabs-4e" class="ocla_page ui-tabs-panel ui-widget-content ui-corner-bottom">
-					<?php include 'index_oclx_search.php'?>
-				</div>
-				<div id="tabs-5a" class="ocla_page ui-tabs-panel ui-widget-content ui-corner-bottom">
-					<?php include 'index_yolox_add.php'?>
-				</div>
-				<div id="tabs-5b" class="ocla_page ui-tabs-panel ui-widget-content ui-corner-bottom">
-					<?php include 'index_yolox_engaged.php'?>
-				</div>
-				<div id="tabs-5c" class="ocla_page ui-tabs-panel ui-widget-content ui-corner-bottom">
-					<?php include 'index_yolox_stamper.php'?>
-				</div>
-				<div id="tabs-5d" class="ocla_page ui-tabs-panel ui-widget-content ui-corner-bottom">
-					<?php include 'index_yolox_search.php'?>
-				</div>
-*/
-?>				
+						
 				<!-- ACTIVITY -->
 				<div id="tabs-8a" class="ocla_page ui-tabs-panel ui-widget-content ui-corner-bottom">
 					<?php include 'index_activity_create.php'?>
@@ -300,11 +242,14 @@ function getSelectSkill($selected){
 					<?php include 'index_activity_search.php'?>
 					<?php include 'index_activity_search_dropmenu.php'?>
 				</div>
-				
+
+				<div id="tabs-8c" class="ocla_page ui-tabs-panel ui-widget-content ui-corner-bottom">
+					<?php include 'index_activity_search_eva.php'?>
+				</div>
 				
 				<!-- POST A PROJECT-->
 				<div id="tabs-6">
-					<?php include 'index_postaproject.php'?>
+					<?php //include 'index_postaproject.php'?>
 				</div>
 				
 				<!-- GS LEAGUE TABLE-->
@@ -318,63 +263,66 @@ function getSelectSkill($selected){
 	</tr>
 	
 </table>
-<!--
-<ul id="dropmenu_ocla" class="dropmenu">
-	<li>
-		<a href="#tabs-4a" class="dropmenu-item">Add an OCL-X</a>
-	</li>
-	<li>
-		<a href="#tabs-4b" class="dropmenu-item">OCL-X engaged</a>
-	</li>
-	<li>
-		<a href="#tabs-4c" class="dropmenu-item">OCL-X coordinated</a>
-	</li>
-	<li>
-		<a href="#tabs-4d" class="dropmenu-item">OCL-X assessor</a>
-	</li>
-	<li>
-		<a href="#tabs-4e" class="dropmenu-item">Seach for participants</a>
-	</li>
-</ul>	
 
-<ul id="dropmenu_yolox" class="dropmenu">
-	<li>
-		<a href="#tabs-5a" class="dropmenu-item">Add a YOLO-X</a>
-	</li>
-	<li>
-		<a href="#tabs-5b" class="dropmenu-item">YOLO-X engaged</a>
-	</li>
-	<li>
-		<a href="#tabs-5c" class="dropmenu-item">YOLO-X stamper</a>
-	</li>
-	<li>
-		<a href="#tabs-5d" class="dropmenu-item">Seach for participants</a>
-	</li>
-</ul>	
--->
 <ul id="dropmenu_activity" class="dropmenu" style="text-align:left">
 	<li>
-		<a href="#tabs-8a" class="dropmenu-item" nowrap>Create activity</a>
+		<a href="#tabs-8a" class="dropmenu-item text_createactivity" nowrap>Create activity</a>
 	</li>
 	<li>
-		<a href="#tabs-8b" class="dropmenu-item" nowrap>Search activity</a>
+		<a href="#tabs-8b" class="dropmenu-item text_searchactivity" nowrap>Search activity</a>
 	</li>
 </ul>	
 
-<ul id="dropmenu_action" class="dropmenu" style="width:120px; text-align:left">
+<!--ACTIVITY-->
+<ul id="dropmenu_action" class="dropmenu" style="text-align:left">
 	<li>
-		<a href="#search_view" class="dropmenu-item" nowrap>View details</a>
+		<a href="#search_view" class="dropmenu-item text_view_details" nowrap>View details</a>
 	</li>
 	<li>
-		<a href="#search_viewedit" class="dropmenu-item" nowrap>View/edit details</a>
+		<a href="#search_viewedit" class="dropmenu-item text_viewedit_details" nowrap>View/edit details</a>
 	</li>
 	<li>
-		<a href="#search_sendmsg" class="dropmenu-item" nowrap>Send message</a>
+		<a href="#search_sendmsg" class="dropmenu-item text_sendmsg" nowrap>Send message</a>
 	</li>
 	<li>
-		<a href="#search_searchppl" class="dropmenu-item" nowrap>Search people</a>
+		<a href="#search_searchppl" class="dropmenu-item text_searchpeople" nowrap>Search people</a>
+	</li>
+	<li>
+		<a href="#search_gsgrades" class="dropmenu-item text_showgsgrades" nowrap>Show GS grades</a>
+	</li>
+	<li>
+		<a href="#search_asmmarks" class="dropmenu-item text_showasmmarks" nowrap>Show assessment marks</a>
 	</li>
 </ul>
+
+<!--TASK-->
+<ul id="dropmenu_searchact" class="dropmenu" style="text-align:left">
+	<li>
+		<a href="#search_gs" class="dropmenu-item" nowrap>Evalute generic skills</a>
+	</li>
+	<li>
+		<a href="#search_eva" class="dropmenu-item" nowrap>Assess assessment</a>
+	</li>
+	<li>
+		<a href="#search_asm" class="dropmenu-item" nowrap>Complete assessment</a>
+	</li>
+	<li>
+		<a href="#search_stp" class="dropmenu-item" nowrap>Give Stamps</a>
+	</li>
+	<li>
+		<a href="#search_ntc" class="dropmenu-item" nowrap>Read notice</a>
+	</li>
+	<li>
+		<a href="#search_msg" class="dropmenu-item" nowrap>Reply message</a>
+	</li>
+	<li>
+		<a href="#search_gsgrades" class="dropmenu-item text_showgsgrades" nowrap>Show GS skills grades</a>
+	</li>
+	<li>
+		<a href="#search_asmmarks" class="dropmenu-item text_showgsgrades" nowrap>Show assessment marks</a>
+	</li>
+	
+</ul>	
 
 <!--CREATE ACTIVITY-->
 
@@ -399,26 +347,13 @@ function getSelectSkill($selected){
 	</li>
 </ul>	
 
-<!--SEARCH ACTIVITY-->
 
-<ul id="dropmenu_searchact" class="dropmenu" style="text-align:left">
+<ul id="dropmenu_lang" class="dropmenu" style="text-align:left">
 	<li>
-		<a href="#search_gs" class="dropmenu-item" nowrap>Evalute Generic Skills</a>
+		<a href="#lang_ENG" class="dropmenu-item" nowrap>English</a>
 	</li>
 	<li>
-		<a href="#search_eva" class="dropmenu-item" nowrap>Evalute Assessment</a>
-	</li>
-	<li>
-		<a href="#search_asm" class="dropmenu-item" nowrap>Perform Assessment</a>
-	</li>
-	<li>
-		<a href="#search_stp" class="dropmenu-item" nowrap>Give Stamps</a>
-	</li>
-	<li>
-		<a href="#search_ntc" class="dropmenu-item" nowrap>Read notice</a>
-	</li>
-	<li>
-		<a href="#search_msg" class="dropmenu-item" nowrap>Reply message</a>
+		<a href="#lang_THA" class="dropmenu-item" nowrap>ไทย (Thai)</a>
 	</li>
 </ul>	
 
@@ -427,7 +362,7 @@ function getSelectSkill($selected){
 		Are you sure?
 </div>
 
-<div id="dialog_eva" class="adialog" title="Evaluation">
+<div id="dialog_eva" class="adialog" title="Assess Assessment">
 	<?php include "./search_eva.php"?>
 </div>
 
@@ -435,12 +370,8 @@ function getSelectSkill($selected){
 	<?php include "./search_gs.php"?>
 </div>
 
-<div id="dialog_asm" class="adialog" title="Assessment">
+<div id="dialog_asm" class="adialog" title="Complete Assessment">
 	<?php include "./search_asm.php"?>
-</div>
-
-<div id="dialog_stp" class="adialog" title="Stamp">
-	<?php include "./search_stp.php"?>
 </div>
 
 <div id="dialog_ntc" class="adialog" title="Notice">
@@ -451,12 +382,17 @@ function getSelectSkill($selected){
 	<?php include "./search_msg.php"?>
 </div>
 
-<div id="dialog_sendmsg" class="adialog" title="Message">
-	<?php include "./search_sendmsg.php"?>
-</div>
 
 <div id="dialog_people" class="adialog" title="People">
 	<?php include "./search_people.php"?>
+</div>
+
+<div id="dialog_gsgrades" class="adialog" title="People">
+	<?php include "./search_gsgrades.php"?>
+</div>
+
+<div id="dialog_asmmarks" class="adialog" title="People">
+	<?php include "./search_asmmarks.php"?>
 </div>
 
 <div id="#dialog_assessment" class="adialog" title="Assessment">
@@ -471,6 +407,11 @@ I was blessed with a program coordinator who organized a memorable curriculum, w
 Did I have to fight for the showers with my roommate? It just so happened that my roommate, Apple (who is now one of my best friends) was also terrified before going on the trip. For the first couple of days, we were very awkward – “You can shower first.” “No you go ahead.” but soon enough, we went from polite (and boring) exchanges to spending literally every waking moment with each other. Apple and I both realized on our last day that we only really called our family once or twice a week, because we were busy enjoying the program, and making the most out of the moment.
 
 My point? Go. Take any opportunity your school offers to go abroad – I promise, it will change your life. Joining this program was the best experience I had in my three years at university. If your school does not offer such programs, adventures do not need to start somewhere in another continent; venture outside of your everyday route, and you would be surprised by what the world outside of your bubble has to offer. In the words of Helen Keller, “Security is mostly a superstition. It does not exist in nature, nor do the children of men as a whole experience it. Avoiding danger is no safer in the long run than outright exposure. Life is either a daring adventure, or nothing.” So choose adventure.
+</div>
+
+<div id="dialog-message" title="Error">
+	<span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 50px 0;"></span>
+	<div id="div_errmsg"></div>
 </div>
 
 </body>
