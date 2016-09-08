@@ -1,0 +1,74 @@
+imagick(windows)
+	
+	1. general installation
+	- http://stackoverflow.com/questions/18375092/imagick-php-windows
+			Install WAMP 32bit (even if you running 64bit system you must use 32bit version of WAMP)
+			Install ImageMagick to C:/imagemagick, use this file: https://www.dropbox.com/s/i2mhrhd7sp0ilzk/ImageMagick-6.8.0-3-Q16-windows-dll.exe
+			Put DLL with Imagick into extension folder of PHP, e.g. D:\wamp32\bin\php\php5.4.16\ext, I used this file: https://www.dropbox.com/s/ayankf850l08rm2/php_imagick.dll
+
+			Step 1) Gather information
+				First of all you should gather some information of your PHP environment.
+				You can easily see your PHP information with the function phpinfo()
+				The information you need:
+					Architecture: x86(32-bit) or x64(64-bit)
+					PHP-version: you can find this in the header of the phpinfo() output.
+					PHP Extension Build: This string contains 2 important parts:
+					NTS or TS
+					VCx (like VC11)
+				Loaded Configuration File: the path to your used php.ini file.
+				
+			Step 2) Download Binary
+				You can download the binary from the official site of ImageMagick.
+					- http://www.imagemagick.org/script/binary-releases.php#windows
+				I recommend you to read the small introduction under the "Windows Binary Release" to be certain which "bits-per-pixel" to choose from(8 or 16). Downloading the latest version should be just fine. Make sure this binary is the same architecture as your PHP architecture that you have gathered in step 1.
+
+			Step 3) Install Binary
+				Install the binary to your phpx.x.xx\bin file. For example: C:\wamp64\bin\php\php5.6.16\bin. (This can be any folder, but for the convenience I put in here)
+				Make sure "Add application directory to your system path" is checked. Should be checked by default though.
+
+			Step 4) Download PHP extension
+				The DLL PHP extension is available through the windows pecl php site:
+					http://windows.php.net/downloads/pecl/releases/imagick/
+					
+				Again, you can just click the latest version.
+				Next of, choose the right version based on the gathered information. 
+				For example: php_imagick-3.4.1-5.6-nts-vc11-x64.zip
+				This can be stripped into components:
+					php_imagick-3.4.1 - This is the php imagick extension with the version. This is not important.
+					5.6 - This is your PHP version and should be equal to the PHP-version you are using, which you have determed in step 1.
+					NTS - This should be equal to the information of your PHP Extension Build that you have gathered in step 1.
+					VC11 - This should also be equal to the information of your PHP Extension Build that you have gathered in step 1.
+					x64 - This the architecture of the extension and should be equal to your PHP architecture that you have gathered in step 1.
+				
+			Step 5) Extract PHP Extension
+				After you have downloaded the file, you should open the .zip file and look for a file named: php_imagick.dll. Extract this file to phpx.x.xx\ext.
+				Make sure the .dll file is fully accessable by you. Sometimes you need to explicity unblock the file.
+				Unblock file
+			
+			Step 6) Activate PHP extension
+
+				To activate the extension in PHP, you should state in your php.ini file that you want to use this extension. You have gathered the path to your used php.ini file in step 1.
+					Add the line 
+						extension=php_imagick.dll
+					to your php.ini PHP.ini Imagick line
+
+			Step 7) Restart your PC
+				Just to make sure, restart your PC so all Environment Paths will be correctly loaded.
+				
+				
+	2. The program can't start because CORE_RL_wand_.dll is missing from your computer. Try reinstalling the program to fix this problem. 
+		https://github.com/WPN-XM/WPN-XM/issues/222				
+		* Without setting ENV PATH to php/ext , the files must go into different folders,
+		* when unzipping the extension archive, e.g. "php_imagick-3.2.0b2-5.4-nts-vc9-x86.zip".
+		* php_imagick.dll goes into the PHP extensions folder /php/ext/
+		* all other dll files *.dll go in to the main PHP folder /php
+			- CORE_RL_bzlib_.dll
+			- CORE_RL_glib_.dll
+			- ...
+			
+	3. number-of-supported-formats = 0
+	http://stackoverflow.com/questions/32764011/imagemagick-number-of-supported-formats-has-showing-value-0
+	This is a common problem when you have downloaded a version of Imagick that was compiled against a different version of ImageMagick than the one you are trying to run it with.
+	Try downloading both Imagick and ImageMagick from the same place e.g.
+	http://windows.php.net/downloads/pecl/deps/
+	http://windows.php.net/downloads/pecl/releases/imagick/

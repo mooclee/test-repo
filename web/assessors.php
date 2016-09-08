@@ -1,7 +1,7 @@
 <table width="100%" class="tbl_details">
 	<tr>
 		<td width="100%">
-			<b>Assessors</b>
+			<b class="text_assessors">Assessors</b>
 		</td>
 	</tr>
 	<tr>
@@ -9,13 +9,13 @@
 			<table width="100%" border="0" class="layout_box" style="background:#f0f0f0">
 				<tr>
 					<td>
-						<?php $placheolder = 'Find assessors or groups of assessors...'; include "searchbar.php"?>
+						<?php $id="inp_findassessors"; $placeholder = 'Find assessors'; include "searchbar.php"?>
 					</td>
 					<td style="width:120px; padding-right:10px">
-						<button class="medium_button"><span class="svg_container" svg="add_user" svgfill="black" svgsize="16"></span>&nbsp; Add</button>
+						<button class="medium_button add_button"><span class="svg_container" svg="add_user" svgfill="black" svgsize="16"></span>&nbsp; <span class="text_add" nowrap>Add</span></button>
 					</td>
 					<td style="border-left:1px solid #e0e0e0; width:150px" align="center">
-						<button class="medium_button import_button"><span class="svg_container" svg="import" svgfill="black" svgsize="16"></span>&nbsp; Import</button>
+						<button class="medium_button import_button"><span class="svg_container" svg="import" svgfill="black" svgsize="16"></span>&nbsp; <span class="text_import" nowrap>Import</span></button>
 					</td>
 				</tr>
 				
@@ -28,10 +28,10 @@
 									<td>
 										&nbsp;
 									</td>
-									<td class="table_header">
+									<td class="table_header text_name">
 										Name
 									</td>
-									<td class="table_header">
+									<td class="table_header text_desc">
 										Description
 									</td>
 									<td>
@@ -55,7 +55,7 @@
 										Social Science HKU
 									</td>
 									<td width="100">
-										<button class="medium_button">Details</button>
+										<button class="details_button"><span class="svg_container" svg="details" svgfill="black" svgsize="16"></span>&nbsp; <span class="text_details" nowrap>Details</span></button>
 									</td>
 									<td width="24">
 										<button class="icon_button but_trash"></button>
@@ -73,7 +73,7 @@
 										Psychology HKU
 									</td>
 									<td width="100">
-										<button class="medium_button">Details</button>
+										<button class="details_button"><span class="svg_container" svg="details" svgfill="black" svgsize="16"></span>&nbsp; <span class="text_details" nowrap>Details</span></button>
 									</td>
 									<td width="24">
 										<button class="icon_button but_trash"></button>
@@ -93,14 +93,14 @@
 			<table class="tbl_footbar">
 				<tr>
 					<td style="border-right:2px solid #e0e0e0; text-align:center; width:30%">
-						<input type="checkbox" checked/>Assess by Self
+						<input type="checkbox" checked/><span class="text_assessedbyself">Assessed by Self</span>
 					</td>
 					<td style="border-right:2px solid #e0e0e0; text-align:center; width:30%">
-						<input type="checkbox" checked/>Assess by Coordinator
+						<input type="checkbox" checked/><span class="text_assessedbycoordinator">Assessed by Coordinator</span>
 					</td>
 					<td style="text-align:center; width:40%">
-						<input type="checkbox" checked/>Assess by Peers
-						<span>(Min. <input class="assessment_spinner" value="5" style="width:25px"/>)</span>
+						<input type="checkbox" checked/><span class="text_assessedbypeers">Assessed by Peers</span>
+						<span>(<span class="text_min">Min.</span> <input class="assessment_spinner" value="5" style="width:25px"/>)</span>
 					</td>
 				</tr>
 			</table>

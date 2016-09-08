@@ -1,8 +1,59 @@
-adding
-	- yolox stamper
-	- searcher's homepage
-	- each assignment has its own period
-	- offline text chat
+20160901
+	- changed the button color from green to blue
+	- scroll2element: 
+			before the focus taking place (much more smoother)
+			only applied when it is not fully visible
+
+20160831
+	- added award, publication, language, interest
+
+20160830
+	- fixed remove profile item affecting position and location
+
+20160830
+	- scroll to editable
+	- load/save sortable order array to database
+	- load/save current location & position
+		- if any present is checked, edit that column
+		- otherwise, show text editing
+	- load/save latest present profile item (if any) to database position and location
+	- scroll the editable to the middle of screen when it is shown
+
+20160829
+	- added delete work item
+	- added client-side validation
+	- added sorting after update
+	- added other xeditable js & css
+
+20160826
+	- added work.js
+	- added trash button
+	- added corresponding database update for profile items
+	
+	- adding:
+		- checkbox: I currently work here
+		- sorting the date
+
+20160819
+	- added bsontest.php which can read write files to database
+
+20160817
+	- selecting inline editor
+		- https://vitalets.github.io/x-editable/demo-jqueryui.html?c=inline
+		- http://www.appelsiini.net/projects/jeditable
+		- http://www.codenothing.com/archives/2009/inline-text-edit/
+		- http://angularscript.com/linkedin-style-inline-editing-with-angularjs-editme/
+
+20160815
+	- added network, participated, coordinated
+	
+	-doing
+		- popup menu
+			- edit profile
+			- print profile
+			
+		- edit my profile
+		- upload my photo
 	
 20160613
 	- added chole pages

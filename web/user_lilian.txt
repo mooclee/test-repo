@@ -1,0 +1,28 @@
+{
+    "_id" : ObjectId("57d11458d3d4430560000e92"),
+    "email" : "alan829@hku.hk",
+    "pwd" : "1234",
+    "name" : "alan poon",
+    "gender" : "0",
+    "birthday" : "2005-09-08",
+    "confirmed_email" : 0,
+    "secret_token" : "C81569F3CE3D7C909DB5E44C3377D635",
+    "last_send_confirm" : "2016-09-08 15:09:44",
+    "curriculum" : "",
+    "institute" : "",
+    "photo" : 0,
+    "network" : 0,
+    "coordinated" : 0,
+    "participated" : 0,
+    "gskills" : [],
+    "activities" : [],
+    "objectives" : "",
+    "profile" : {
+        "work" : [],
+        "education" : [],
+        "publication" : [],
+        "language" : [],
+        "award" : [],
+        "interest" : []
+    }
+}

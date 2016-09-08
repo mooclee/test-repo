@@ -39,7 +39,7 @@
 							<img src="./people/m01.jpg" width="32"/>
 						</td>
 						<td>
-							<a href="javascript:changePerson('wilson')">Wilson Lee</a>
+							<!--<a href="javascript:changePerson('wilson')">Wilson Lee</a>-->
 						</td>
 						<td>
 							<div class="toggle_stamp toggle-light"></div>
@@ -87,7 +87,7 @@
 							<img src="./people/f08.jpg" width="32"/>
 						</td>
 						<td>
-							<a href="javascript:changePerson('marianna')">Marianna Chan</a>
+							<!--<a href="javascript:changePerson('marianna')">Marianna Chan</a>-->
 							
 						</td>
 						<td>

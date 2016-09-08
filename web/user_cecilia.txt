@@ -1,0 +1,202 @@
+{
+    "_id" : ObjectId("579377fad3d4430968001e0c"),
+    "email" : "cecilia.chan@cetl.hku.hk",
+    "pwd" : "cetl1234",
+    "name" : "Cecilia Chan",
+    "gender" : "1",
+    "birthday" : "1975-04-01",
+    "confirmed_email" : 1,
+    "secret_token" : "22E678CB39C25BF0167674E70A3FBD7A",
+    "last_send_confirm" : "2016-08-12 11:08:24",
+    "network" : 16,
+    "coordinated" : 2,
+    "participated" : 7,
+    "gskills" : {
+        "Information technology" : {
+            "show" : 1,
+            "score" : 4.5,
+            "rated" : [ 
+                "p01", 
+                "p02", 
+                "p04", 
+                "m02", 
+                "f03", 
+                "m04", 
+                "p01", 
+                "p02", 
+                "p03", 
+                "p04", 
+                "f01"
+            ]
+        },
+        "Teamwork" : {
+            "show" : 1,
+            "score" : 4.5,
+            "rated" : [ 
+                "p01", 
+                "p02", 
+                "p04", 
+                "m02", 
+                "f03", 
+                "m04", 
+                "p01", 
+                "p02", 
+                "p03", 
+                "p04", 
+                "f01", 
+                "m02", 
+                "f03", 
+                "m04"
+            ]
+        },
+        "Problem solving" : {
+            "show" : 1,
+            "score" : 4,
+            "rated" : [ 
+                "p06", 
+                "f01", 
+                "m01", 
+                "f02", 
+                "f03"
+            ]
+        },
+        "Critical thinking" : {
+            "show" : 1,
+            "score" : 4,
+            "rated" : [ 
+                "p05", 
+                "p06", 
+                "p07", 
+                "", 
+                "f01"
+            ]
+        },
+        "Numeracy" : {
+            "show" : 1,
+            "score" : 4,
+            "rated" : [ 
+                "p06", 
+                "f01", 
+                "m01", 
+                "f02", 
+                "f03", 
+                "f04"
+            ]
+        },
+        "Self-management" : {
+            "show" : 1,
+            "score" : 4,
+            "rated" : [ 
+                "p05", 
+                "p06", 
+                "p07", 
+                "", 
+                "f01"
+            ]
+        },
+        "Creativity" : {
+            "show" : 1,
+            "score" : 3.5,
+            "rated" : [ 
+                "p05", 
+                "p06", 
+                "p07", 
+                "p08", 
+                "m02", 
+                "f03", 
+                "m04", 
+                "", 
+                ""
+            ]
+        },
+        "Organization" : {
+            "show" : 1,
+            "score" : 3,
+            "rated" : [ 
+                "p07", 
+                "p08", 
+                "", 
+                ""
+            ]
+        },
+        "Leadership" : {
+            "show" : 1,
+            "score" : 3.5,
+            "rated" : [ 
+                "p05", 
+                "p06", 
+                "p07", 
+                "p08", 
+                "f01", 
+                "m02", 
+                "f03", 
+                "m04", 
+                ""
+            ]
+        },
+        "Communication" : {
+            "show" : 1,
+            "score" : 3,
+            "rated" : [ 
+                "p06", 
+                "p07", 
+                "p08", 
+                "", 
+                "", 
+                ""
+            ]
+        },
+        "Collaboration" : {
+            "show" : 1,
+            "score" : 3,
+            "rated" : [ 
+                "p01", 
+                "p03", 
+                "f03", 
+                "m08", 
+                "m02", 
+                ""
+            ]
+        }
+    },
+    "activities" : [ 
+        1, 
+        2, 
+        3, 
+        4, 
+        5, 
+        6
+    ],
+    "username" : "Cecilia Chan",
+    "photo" : 1,
+    "profile" : {
+        "order" : [ 
+            "objectives", 
+            "education", 
+            "work", 
+            "publication", 
+            "award", 
+            "language", 
+            "interest"
+        ],
+        "work" : [],
+        "education" : [ 
+            {
+                "item_id" : 0,
+                "school" : "asdf",
+                "degree" : "",
+                "field" : "",
+                "start" : "2016",
+                "end" : "2016",
+                "desc" : ""
+            }
+        ],
+        "publication" : [],
+        "language" : [],
+        "award" : [],
+        "interest" : []
+    },
+    "position" : "",
+    "location" : "",
+    "objectives" : ""
+}
