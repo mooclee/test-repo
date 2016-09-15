@@ -1,3 +1,25 @@
+20160911
+	- resumed chole in network
+	- looping for the activity
+
+20160910
+	- fixed radarchart unable to be shown in mobile
+
+20160909
+	- avoid overwriting the document.title
+	- show tooltip with bootstrap 3
+	- protect windows 7 apache by basic authentication
+		- C:\Apache24\bin\htpasswd.exe -c "C:\Users\alan2\Google Drive\___CETL\YOCLE\web\.htpasswd" cecilia
+		#
+		# http://wiki.apache.org/httpd/PasswordBasicAuth
+		#
+		#AuthType Basic
+		#AuthName "Authentication Required"
+		#AuthUserFile "C:/Users/alan2/Google Drive/___CETL/YOCLE/web/.htpasswd"
+		#Require valid-user
+		#Order allow,deny
+		#Allow from all
+
 20160901
 	- changed the button color from green to blue
 	- scroll2element: 

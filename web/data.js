@@ -1,3 +1,35 @@
+/*
+var g_static = {
+	institutes: [
+		{id:'hkcityu', text:'City University of Hong Kong (CityU), Hong Kong'},
+		{id:'hkbu', text:'Hong Kong Baptist University (HKBU), Hong Kong'},
+		{id:'hklu', text:'Lingnan University (LU), Hong Kong'},
+		{id:'hkcuhk', text:'The Chinese University of Hong Kong (CUHK), Hong Kong'},
+		{id:'eduhk', text:'The Education University of Hong Kong (EdUHK), Hong Kong'},
+		{id:'hkpolyu', text:'The Hong Kong Polytechnic University (PolyU), Hong Kong'},
+		{id:'hkust', text:'The Hong Kong University of Science and Technology (HKUST), Hong Kong'},
+		{id:'hku', text:'The University of Hong Kong (HKU), Hong Kong'},
+	],
+};
+*/
+var g_static = {
+	institutes: [
+		{id:'City University of Hong Kong (CityU), Hong Kong', text:'City University of Hong Kong (CityU), Hong Kong'},
+		{id:'Hong Kong Baptist University (HKBU), Hong Kong', text:'Hong Kong Baptist University (HKBU), Hong Kong'},
+		{id:'Lingnan University (LU), Hong Kong', text:'Lingnan University (LU), Hong Kong'},
+		{id:'The Chinese University of Hong Kong (CUHK), Hong Kong', text:'The Chinese University of Hong Kong (CUHK), Hong Kong'},
+		{id:'The Education University of Hong Kong (EdUHK), Hong Kong', text:'The Education University of Hong Kong (EdUHK), Hong Kong'},
+		{id:'The Hong Kong Polytechnic University (PolyU), Hong Kong', text:'The Hong Kong Polytechnic University (PolyU), Hong Kong'},
+		{id:'The Hong Kong University of Science and Technology (HKUST), Hong Kong', text:'The Hong Kong University of Science and Technology (HKUST), Hong Kong'},
+		{id:'The University of Hong Kong (HKU), Hong Kong', text:'The University of Hong Kong (HKU), Hong Kong'},
+	],
+};
+
+//
+// curriculum
+// http://www.aal.hku.hk/admissions/local/admissions-information?page=en/faculty/faculty-social-sciences
+//
+
 var g_activity_arr = [
 	0,
 	{
@@ -13,7 +45,6 @@ var g_activity_arr = [
 		img:'./oclx/earthquake2.jpg',
 		video:'./video/earthquake.mp4',
 		youtube:'https://www.youtube.com/embed/qBRrEl6DzEc',
-
 		tasks: [
 			{
 				type: 'ASM',
@@ -42,19 +73,35 @@ var g_activity_arr = [
 				type: 	'GS',
 				start: 	'28 Jul 2012',
 				end: 		'31 Jul 2012',
-				title:	'Evaluation(G.S.): Generic Skills (x40)',
+				title:	'Evaluation(G.S.): Generic Skills',
 			},
 			{
 				type: 	'EVA',
 				start: 	'1 Aug 2012',
 				end: 		'8 Aug 2012',
-				title:	'Evaluation(Abstract): Overseas Experience (x12)',
+				title:	'Evaluation(Abstract): Overseas Experience (25%)',
+				html:		'In the summer of 2012, I realized this needed to change. As a part of my program at the university here, I had to obtain credits through either an internship or a summer institute somewhere outside of Hong Kong. I tend to put on a go-getter, “Adventures? That’s for me!” façade, but in all honesty, I was terrified. I dreaded the very idea of being away from home for not a week, but a month in foreign countries with people I did not know. Quite clearly, I did not have much of a choice but to apply for something if I was serious about getting my degree – so I did it. I applied for a summer institute program that was organized by my university, which required me to go to Taiwan for 2 weeks, and South Korea for another 2. For most people, applying for something probably is not that big of a deal. All it requires is a scanner or good ol’ Fedex to submit your paperwork, right? Well no, not for me. The mere process of applying took a while, as I was really overwhelmed by the idea of taking flight – quite literally in my case. There were talks of needing to find a roommate and all that circulated in my head was, Roommate?! I finally worked up the courage to leave my bubble and now you’re telling me I have to live with a stranger?! I have heard terrible and unfortunate accounts of roommates not getting along, from questionable music tastes on loudspeaker, to dishes that get piled for weeks on end. Just to reiterate, I REALLY (in bold, italics, underline, and caps) did not want to go. The day of doom finally came, where I had to drag my suitcases and my sorry self to the trip. I begged my mother to be online every day so that I could be reminded that I was not completely lonely. When I got to Taiwan, I was awed by the friendly atmosphere and the hustle and bustle of the city life, much like Hong Kong. My classmates and I learned about the Taiwanese political parties by visiting their headquarters, and we got a chance to write our wishes on sky lanterns as well. Similarly in South Korea, I was intrigued by their vibrant culture through my time at the teahouses, and even got to visit the demilitarized zone, which essentially is a border between South and North Korea. They have a ‘safe house’ in the very middle of the border, and it is only in this box where you get to hop freely between the two Koreas – how many people get to say, “I have stood precisely between the North and the South”? Not many!',
 			},
 			{
 				type: 	'EVA',
 				start: 	'28 Jul 2012',
 				end: 		'31 Jul 2012',
-				title:	'Evaluation(Blog): My Blog (x30)',
+				title:	'Evaluation(Blog): My Blog (25%)',
+				html:		'Does an Overseas Education Mean Better Prospects? In the highly competitive world today, people would do anything just to improve their prospects when they graduate. Before that meant going to top universities and Ivy League schools to increase the chances of landing a distinctively great job. This time, it means widening your horizon and going abroad to study. <br/><br/> Benefits of Studying Abroad<br/><br/>A recent study by the Rotterdam School of Management, Erasmus University (RSM) revealed that students apparently had a better opportunity when they pursue an overseas education as HR heads of major companies are looking for prospects with international talent.The only way to develop this is through overseas education which a lot of universities offer now through partner programs, internships and scholarships. But the broad term of studying abroad has to be qualified in order to become truly relevant to prospective professionals.<br/><br/>The RSM research conducted on over 1,000 respondents from around the globe revealed that they generally felt that overseas education did in fact improve their competencies as managers by making them more self-aware, flexible and independent. When you are flung into an unknown environment where you have to cope and co-exist with a culture totally different from your own, you would certainly develop skills and talents that can make you cope with life easier in your new habitat.<br/><br/>People going abroad to study in developed and established economies benefit more from the study experience than those heading to still developing economies. The respondents in the study had this general sentiment and this could actually be attributed to the fact that it is more challenging to interact and cope with the locals in such areas. So when you do decide on educational travel, be sure that you optimize this by also qualifying the places that you want to study in.<br/><br/>In the long-run, the Asian market is the place to be as it is expected to have the highest rates in hiring MBA and other business related courses in the next few years.',
+			},
+			{
+				type: 	'EVA',
+				start: 	'28 Jul 2012',
+				end: 		'31 Jul 2012',
+				title:	'Evaluation(MCQ): GCSI MCQ (25%)',
+				html:		'<table align="center"><tr><td><table cellspacing="0" class="mcq_table"><tr><td colspan="4" class="mcq_question"><b>Q.1. Do you know the capital city of South Korea? (20%)</b></td></tr><tr class="mcq_answer"><td>A.</td><td>Seoul</td><td><input type="checkbox" disabled checked /></td><td style="color:red">Correct</td></tr><tr class="mcq_answer"><td>B.</td><td>Busan</td><td><input type="checkbox" disabled /></td><td>&nbsp;</td></tr><tr class="mcq_answer"><td>C.</td><td>Icheon</td><td><input type="checkbox" disabled /></td><td>&nbsp;</td></tr></table></td></tr><tr><td><table cellspacing="0" class="mcq_table"><tr><td colspan="4" class="mcq_question"><b>Q.2. What is the population in South Korea? (20%)</b></td></tr><tr class="mcq_answer"><td>A.</td><td>22.8 million</td><td><input type="checkbox" disabled/></td><td>&nbsp;</td></tr><tr class="mcq_answer"><td>B.</td><td>40 million</td><td><input type="checkbox" disabled /></td><td>&nbsp;</td></tr><tr class="mcq_answer"><td>C.</td><td>50 million</td><td><input type="checkbox" disabled checked  /></td><td style="color:red">Correct</td></tr><tr class="mcq_answer"><td>D.</td><td>70 million</td><td><input type="checkbox" disabled /></td><td>&nbsp;</td></tr></table></td></tr><tr><td><table width="100%"><tr><td class="mcq_question"><b>Q.3. What are the differences between living in Taiwan and South Korea? (1000 words) (60%)</b></td></tr><tr><td style="padding:10px 15px"><div style="border-radius:8px; border:1px solid gray; padding:10px; background:#f8f8f8; text-align:justify"><b>1. Smoking Girls</b><br/>In Korea, I always found it strange and uncomfortable to walk into a bar bathroom and instantly find myself enveloped in a suffocating cloud of smoke. Once my eyes became adjusted to the smokescreen, I\'d realize that Korean girls were the culprits holding the cigarettes. Once they were done puffing away, they\'d reapply their lipstick, spritz a bit of perfume over their hair, pop in a bit of gum in their mouths, and walk back out to the bar to rejoin their dates. So, what\'s the deal with all the secrecy? Women should be cute and soft in Korea. From their adorable peter pan collared dresses to their bubble gum pink lipstick, Korean girls are expected to portray a perfect feminine woman, which means no smoking since that\'s for boys and no heavy drinking. Taiwan is a whole different ball game. I was almost shocked as I walked the streets of the trendy shopping district of Dunhua in Taipei and saw so many girls puffing away on Pall Malls in broad daylight. There was not even an ounce of shyness in the women smokers of Taiwan.<br/><br/><b>2. Bowing</b><br/>Most of the time at work in Korea, I\'d feel as though I were getting a stiff neck from bowing so often throughout the day. If a co-worker walked into the office, we\'d bow. If I were leaving the office, I\'d bow. When the cafeteria lady gave me extra fruit because she though I was too skinny, we\'d bow. If the principal walked by me, we\'d bow…..like a million times. I\'m sure you get the point? Respect is valued above all else in Korean culture, and bowing is a way to express that respect you have for someone else. In Taiwan, my shoulders are much more relaxed. I\'ve witnessed and maybe bowed myself only a handful of times. While I do feel like there is a beauty in the level of respect Korea places on elders and honor, I truly enjoy being able to feel a bit more comfortable with the people I meet in Taiwan. To me, it seems more friendly and laid back to enjoy a conversation with a Taiwanese person and not have to strain my neck and back bowing so often.<br/><br/><b>3. Openness</b><br/>By far my favorite thing about Taiwan I\'ve experienced is that the culture is so open and accepting. Taiwan holds strong Taoist philosophies, which teaches followers to live in harmony. This influence in Taiwan allows many people to live lifestyles they prefer without fear of being cast out or persecuted. As a result, the flow and energy of Taiwan is extremely open allowing believers of many religions to practice openly. Korea, on the other hand, is a much more reserved country. While the younger generation is slowly becoming more vocal and open about striving for acceptance for different races, cultures, and communities, there is still much more time and work that must be involved before Korea as a whole changes its conservative views.<br/><br/><b>4. Act of affection</b><br/>Expat couples who love sharing public smooches and embraces should definitely apply to teach in Taiwan because those little acts of affection aren\'t cute to Koreans. In fact, they\'re quite scandalous to older ajummas (old Korean grandmas) and ajushis (old Korean grandpas). When I was a bitter singleton in Korea, I loved that no one was allowed to show affection passed hand holding in public because it made me sick to my stomach and green with envy. Now that I\'m in a stable relationship with a former expat, though, I\'m pretty happy to be in a country that will allow me to plant kisses all over my partner\'s forehead when he visits in December!<br/><br/><b>5. Drinking</b><br/>In Korea, day or night, it never failed that I\'d see someone slumped over a sidewalk with that blank expression (and sour smell) that gave away their drink of choice for the last couple hours. Soju. The strong rice wine is actually cheaper than a bottle of water and is the most popular alcoholic drink sold in the country.Although Taiwan has a cheap liquor that is the equivalent of soju, I\'ve hardly seen the amounts consumed in the land of stinky tofu that I witnessed being binged on in Korea. I won\'t lie and say I\'m sad my soju soaked nights are far behind me, but I am incredibly happy every morning in Taiwan without a murderous soju headache, which I\'m nearly positive is the equivalent of water board torture or worse. Soju hangovers are seriously that horrible.<br/><br/></div></td></tr></table></td></tr></table>',
+			},
+			{
+				type: 	'EVA',
+				start: 	'28 Jul 2012',
+				end: 		'31 Jul 2012',
+				title:	'Evaluation(Survey): GCSI Survey (25%)',
+				html:		'<table align="center"><tr><td><table cellspacing="0" class="survey_table"><tr><td colspan="4" class="survey_question"><b>Q.1. Have you joined the trip to Taiwan and South Korea?</b></td></tr><tr class="survey_answer"><td>A.</td><td>Yes</td><td><input type="checkbox" disabled checked/></td></tr><tr class="survey_answer"><td>B.</td><td>No</td><td><input type="checkbox" disabled /></td></tr></table></td></tr><tr><td><table cellspacing="0" class="survey_table"><tr><td colspan="4" class="survey_question"><b>Q.2. Do you think you have experienced a lot of different cultural aspects in Taiwan and South Korea during the programme?</b></td></tr><tr class="survey_answer"><td>A.</td><td>Strongly agree</td><td><input type="checkbox" disabled checked /></td></tr><tr class="survey_answer"><td>B.</td><td>Agree</td><td><input type="checkbox" disabled /></td></tr><tr class="survey_answer"><td>C.</td><td>Neutral</td><td><input type="checkbox" disabled /></td></tr><tr class="survey_answer"><td>D.</td><td>Disagree</td><td><input type="checkbox" disabled /></td></tr><tr class="survey_answer"><td>E.</td><td>Strongly disagree</td><td><input type="checkbox" disabled /></td></tr></table></td></tr><tr><td><table cellspacing="0" class="survey_table"><tr><td colspan="4" class="survey_question"><b>Q.3. How do you rate the programme?</b></td></tr><tr class="survey_answer"><td>A.</td><td>Excellent</td><td><input type="checkbox" disabled checked /></td></tr><tr class="survey_answer"><td>B.</td><td>Good</td><td><input type="checkbox" disabled /></td></tr><tr class="survey_answer"><td>C.</td><td>Neutral</td><td><input type="checkbox" disabled /></td></tr><tr class="survey_answer"><td>D.</td><td>Bad</td><td><input type="checkbox" disabled /></td></tr><tr class="survey_answer"><td>E.</td><td>Very bad</td><td><input type="checkbox" disabled /></td></tr></table></td></tr><tr><td><table cellspacing="0" class="survey_table"><tr><td colspan="4" class="survey_question"><b>Q.4. Do you think the programme has met your expectations?</b></td></tr><tr class="survey_answer"><td>A.</td><td>Strongly agree</td><td><input type="checkbox" disabled checked /></td></tr><tr class="survey_answer"><td>B.</td><td>Agree</td><td><input type="checkbox" disabled /></td></tr><tr class="survey_answer"><td>C.</td><td>Neutral</td><td><input type="checkbox" disabled /></td></tr><tr class="survey_answer"><td>D.</td><td>Disagree</td><td><input type="checkbox" disabled /></td></tr><tr class="survey_answer"><td>E.</td><td>Strongly disagree</td><td><input type="checkbox" disabled /></td></tr></table></td></tr></table>',
 			},
 		],
 	},
@@ -86,7 +133,7 @@ var g_activity_arr = [
 		// 4. YOLO-X#1:
 		title:'Experiential Learning 2016',
 		type: 'YOLO-X',
-		role: 'Coordinator',
+		role: 'Assessor',
 		start: '15 May 2016',
 		end: '31 May 2016',
 		status:	'Completed',
@@ -97,17 +144,18 @@ var g_activity_arr = [
 
 		tasks: [
 			{
-				type: 'EVA',
-				title: 'Evalution(Survey): Community Advisor Survey',
+				type: 'NTC',
+				title: 'Result released: Community Advisor Survey',
 				start: '1 Jun 2016',
 				end: '10 Jun 2016',
+				html: '<b>Assessment Evalution</b> 7 Jan 2016<br/><br/>Community Advisor Survey<br/><br/><b>Marks</b>:\t87',
 			},
-			{
-				type: 'STP',
-				title: 'Stamp proof: (x5)',
-				start: '1 Jun 2016',
-				end: '21 Jun 2016',
-			},
+			//{
+			//	type: 'STP',
+			//	title: 'Stamp proof: (x5)',
+			//	start: '1 Jun 2016',
+			//	end: '21 Jun 2016',
+			//},
 		],
 	},
 	{
@@ -117,22 +165,22 @@ var g_activity_arr = [
 		role: 'Participants',
 		start:	'17 Jul 2016',
 		end:		'31 Jul 2016',
-		status:	'completed',
+		status:	'Completed',
 		text: 'Jumping is fun! Skydiving is not just falling; it is flying—the closest we have been able to come to free, unencumbered, non-mechanical individual flight. "Bend your knees," he says and I have to obey. From behind, he pulls the strap until the rubber scrapes my skull. I hug my arms against my chest and crank my head back, making the shackles around my thighs tighten further. "Now," he commands, as I try to ignore the gap where the side of the aeroplane should be, "don’t forget to smile for the camera." And with that, we’re gone. Of course, there’s been a build up to my first sky dive. Hundreds of thousands of other people have already done this, including, I’m hoping, my instructor. I use this thought to keep me steady on the morning of the big day. I’ve met people who’ve done parachute-loads of these things, including those for whom it’s simply a matter of getting from A to B: barracks to war zone. Their plight puts my pre-jump jitters into perspective.',
 		img:'./yolox/parachute2.jpg',
 		video:'./video/parachute_360p.mp4',
 		youtube:'https://www.youtube.com/embed/BLMQEKYkPfA',
 		tasks: [
-			{
-				type: 'NTC',
-				title: 'Prof. C. Chan has stamped your activity',
-				start: '1 Jun 2016',
-				end: '1 Jun 2016',
-				html: 'Prof. C. Chan stamped your activity on 1 Jun 2016.',
-			},
+			//{
+			//	type: 'NTC',
+			//	title: 'Prof. C. Chan has stamped your activity',
+			//	start: '1 Jun 2016',
+			//	end: '1 Jun 2016',
+			//	html: 'Prof. C. Chan stamped your activity on 1 Jun 2016.',
+			//},
 			{
 				type: 'MSG',
-				title: 'Peter Wong sent you a message',
+				title: 'Chloe Madely sent you a message',
 				start: '8 Jun 2016',
 				end: '8 Jun 2016',
 			},
@@ -155,8 +203,15 @@ var g_activity_arr = [
 		//],
 		tasks: [
 			{
+				type: 	'ASM',
+				start: 	'28 Jul 2012',
+				end: 		'31 Jul 2012',
+				title:	'Assessment(Survey): Community Advisor Survey',
+				html:		'Does an Overseas Education Mean Better Prospects? In the highly competitive world today, people would do anything just to improve their prospects when they graduate. Before that meant going to top universities and Ivy League schools to increase the chances of landing a distinctively great job. This time, it means widening your horizon and going abroad to study. <br/><br/> Benefits of Studying Abroad<br/><br/>A recent study by the Rotterdam School of Management, Erasmus University (RSM) revealed that students apparently had a better opportunity when they pursue an overseas education as HR heads of major companies are looking for prospects with international talent.The only way to develop this is through overseas education which a lot of universities offer now through partner programs, internships and scholarships. But the broad term of studying abroad has to be qualified in order to become truly relevant to prospective professionals.<br/><br/>The RSM research conducted on over 1,000 respondents from around the globe revealed that they generally felt that overseas education did in fact improve their competencies as managers by making them more self-aware, flexible and independent. When you are flung into an unknown environment where you have to cope and co-exist with a culture totally different from your own, you would certainly develop skills and talents that can make you cope with life easier in your new habitat.<br/><br/>People going abroad to study in developed and established economies benefit more from the study experience than those heading to still developing economies. The respondents in the study had this general sentiment and this could actually be attributed to the fact that it is more challenging to interact and cope with the locals in such areas. So when you do decide on educational travel, be sure that you optimize this by also qualifying the places that you want to study in.<br/><br/>In the long-run, the Asian market is the place to be as it is expected to have the highest rates in hiring MBA and other business related courses in the next few years.',
+			},
+			{
 				type: 'NTC',
-				title: 'G.S. evalutaion',
+				title: 'Result released: Generic Skills',
 				start: '18 Dec 2016',
 				end: '7 Jan 2016',
 				html: '<b>Generic Skills Evalution</b> 7 Jan 2016\n<pre>Communication\t3.5\nLeadership\t4\nCollaboration\t3.5\nTeamwork\t3.7\n\n<b>Overall\t3.7</b></pre>',
@@ -164,3 +219,243 @@ var g_activity_arr = [
 		],
 	},
 ];
+
+
+var
+	gs_samson = 
+	{
+		'Information technology':{
+			show: 1,
+			score: 4.5,
+			rated: [
+				'p01',
+				'p02',
+				'p04',
+				'm02',
+				'f03',
+				'm04',
+				'p01',
+				'p02',
+				'p03',
+				'p04',
+				'f01',
+			],
+		},
+		'Teamwork':{
+			show: 1,
+			score: 4.5,
+			rated: [
+				'p01',
+				'p02',
+				'p04',
+				'm02',
+				'f03',
+				'm04',
+				'p01',
+				'p02',
+				'p03',
+				'p04',
+				'f01',
+				'm02',
+				'f03',
+				'm04',
+			],
+		},
+		'Problem solving':{
+			show: 1,
+			score: 4,
+			rated: [
+				'p06',
+				'f01',
+				'm01',
+				'f02',
+				'f03',
+			],
+		},
+
+		'Critical thinking':{
+			show: 1,
+			score: 4,
+			rated: [
+				'p05',
+				'p06',
+				'p07',
+				'',
+				'f01',
+			],
+		},
+		'Numeracy':{
+			show: 1,
+			score: 4,
+			rated: [
+				'p06',
+				'f01',
+				'm01',
+				'f02',
+				'f03',
+				'f04',
+			],
+		},
+			'Self-management':{
+				show: 1,
+				score: 4,
+				rated: [
+					'p05',
+					'p06',
+					'p07',
+					'',
+					'f01',
+				],
+			},
+		'Creativity':{
+			show: 1,
+			score: 3.5,
+			rated: [
+				'p05',
+				'p06',
+				'p07',
+				'p08',
+				'm02',
+				'f03',
+				'm04',
+				'',
+				'',
+			],
+		},
+		'Organization':{
+			show: 1,
+			score: 3,
+			rated: [
+				'p07',
+				'p08',
+				'',
+				'',
+			],
+		},
+		'Leadership':{
+			show: 1,
+			score: 3.5,
+			rated: [
+				'p05',
+				'p06',
+				'p07',
+				'p08',
+				'f01',
+				'm02',
+				'f03',
+				'm04',
+				'',
+			],
+		},
+		'Communication':{
+			show: 1,
+			score: 3,
+			rated: [
+				'p06',
+				'p07',
+				'p08',
+				'',
+				'',
+				'',
+			],
+		},
+		'Collaboration':{
+			show: 1,
+			score: 3,
+			rated: [
+				'p01',
+				'p03',
+				'f03',
+				'm08',
+				'm02',
+				'',
+			],
+		},
+	}
+;	
+var 
+	gs_chloe =
+	{
+		'Teamwork':{
+			show: 1,
+			score: 4.5,
+			rated: [
+				'p01',
+				'p02',
+				'p04',
+				'm02',
+				'f03',
+				'm04',
+				'p01',
+				'p02',
+				'p03',
+				'p04',
+				'f01',
+				'm02',
+				'f03',
+				'm04',
+			],
+		},
+		'Leadership':{
+			show: 1,
+			score: 3.5,
+			rated: [
+				'p05',
+				'p06',
+				'p07',
+				'p08',
+				'f01',
+				'm02',
+				'f03',
+				'm04',
+				'',
+			],
+		},
+		'Problem solving':{
+			show: 1,
+			score: 4,
+			rated: [
+				'p06',
+				'f01',
+				'm01',
+				'f02',
+				'f03',
+			],
+		},
+		'Critical thinking':{
+			show: 1,
+			score: 4,
+			rated: [
+				'p05',
+				'p06',
+				'p07',
+				'',
+				'f01',
+			],
+		},
+		'Communication':{
+			show: 1,
+			score: 3,
+			rated: [
+				'p06',
+				'p07',
+				'p08',
+				'',
+				'',
+				'',
+			],
+		},
+		'Collaboration':{
+			show: 1,
+			score: 3,
+			rated: [
+				'p06',
+				'p07',
+				'p08',
+				'',
+				'',
+				'',
+			],
+		},
+	}
+;

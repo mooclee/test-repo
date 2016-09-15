@@ -1,4 +1,5 @@
 <?php
+$debug_svrop = 0;
 
 function getSelectMethod($selected){
 	global $method_arr;
@@ -26,45 +27,48 @@ function getSelectSkill($selected){
 	return $s;
 }
 
-/////////////////////////////////////////////////////////////////////
-
+///////////////////////////////////////////////////////////////////////////////
+// make sure the parent folder is grant full control for everyone (Windows)
+///////////////////////////////////////////////////////////////////////////////
 function wlog($str) {
-	return;
-	global $logfile;
-	// log to the output
-	$log_str = getDateTime() . " {$str}\r\n";
-	//echo $log_str . '<br/>';
-	// log to file
-	echo $logfile;
-	if (($fp = fopen($logfile, 'a+')) !== false) {
-		fputs($fp, $log_str);
-		fclose($fp);
-	} else {
-		echo 'error in wlog';
+	global $logfile, $debug_svrop;;
+	//if ($debug_svrop == 1){
+	
+	//	echo $str.'<br/>';
+		
+	//} else 
+	{
+	
+		// log to the output
+		$log_str = getDateTime() . " {$str}\r\n";
+		if (($fp = fopen($logfile, 'a+')) !== false) {
+			fputs($fp, $log_str);
+			fclose($fp);
+		} else {
+			echo 'error in wlog';
+		}
 	}
 }
 
 /////////////////////////////////////////////////////////////////////
 
 function mychmod($path){
-/*
 	global $error;
 	try {
 		//chmod($path, 0755);
 		if (is_dir($path)){
 			$iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($path));
 			foreach($iterator as $item){
-				chmod($item, 0755);
+				chmod($item, 0777);
 			}
 		} else if (file_exists($path)){
-			chmod($path, 0755);
+			chmod($path, 0777);
 		}
 	} catch (Exception $e) {		
 		//wlog('Caught exception: '.$path.' '.$e->getMessage().' \n');
 		$error = 'Caught exception: '.$path.' '.$e->getMessage();
 		wlog($error);
 	}
-*/	
 }
 
 /////////////////////////////////////////////////////////////////////
@@ -94,14 +98,77 @@ function sendEmail($senders, $recipients, $subject, $body){
 	return $result;
 }
 
+///////////////////////////////////////////////////////////////////////////
+// find schoolyear
+
+function getSchoolYear($s_date){
+	$schoolyear = "";
+	$datetime1 = new DateTime($s_date);
+	$datetime2 = new DateTime();	// now
+	$interval = $datetime1->diff($datetime2);
+	$days = intval($interval->format('%R%a'));
+	$years = 0;
+	//echo "$days day(s)<br/>";	// testing only
+	if ($days > 0){
+		$years = $days / 365;
+		if ($years > intval($years)){
+			$years = intval($years) + 1;
+		}
+		$schoolyear = ", Year $years";
+	}
+	return $schoolyear;
+}
+
+///////////////////////////////////////////////////////////////////////////
+// find period
+
+function getPeriod($s_date){
+	$datetime1 = new DateTime($s_date);
+	$datetime2 = new DateTime();
+	$interval = $datetime1->diff($datetime2);
+	$period = "";
+	$days = intval($interval->format('%R%a'));
+	$years = $interval->format('%y');
+	$months = $interval->format('%m');
+	//echo "$months month(s)<br/>";	// testing only
+	if ($days < 31){
+		// no month yet
+	} else {
+		// year(s) month(s)
+		if ($years > 0){
+			$period = $interval->format('%y year');
+			if ($years > 1){
+				$period .= 's';
+			}
+		}
+		if ($months > 0){
+			if ($period != ""){
+				$period .= " ";
+			}
+			$period .= $interval->format('%m month');
+			if ($months > 1){
+				$period .= 's';
+			}
+		}
+		$period = " ($period)";
+	}
+	return $period;
+}
+
 $database = "yolofolio";
 
 define('SLASH', DIRECTORY_SEPARATOR);
 
+date_default_timezone_set('Asia/Hong_Kong');
+$user = get_current_user();
 $logfile = getcwd() . SLASH . 'svrop.log';
-mychmod($logfile);
-
+//echo $logfile;
+//chown($logfile, $user);
+//mychmod($logfile);
+//$rv = fileowner($logfile);
+//echo $rv;
 //$def_ext = 'png';
+
 $def_ext = 'jpg';
 $jpg_quality = 94;
 
@@ -141,4 +208,3 @@ $skill_arr = Array(
 );
 
 ?>
-
