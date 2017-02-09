@@ -1,0 +1,440 @@
+20170210
+	- changed assessment page from featherlight to bodyview
+	- edit assessement buttons
+		> remove all buttons from edit assessment buttons
+		> resume trash button in assessment list
+	- modified the activity list to be closer to mobile scrollview
+
+20170210
+	- interface.js
+		> added svrop_notify.php
+		> added notify_token for android and ios
+	- hide #div_topmenu	except it is web, home or profile
+	- same height for activities stat and gs score
+
+20170209
+	- changeBodyView
+		- instead of featherlight, use fadeOut & fadeIn to switch bodyview
+		- solved poster too narrow issue
+	- a.uploader.js
+		- may use featherlight as lightbox all the time for video/image display
+
+20170209
+	- poster
+		- changed data_type to poster2
+		- only save when submitting
+		- may save marks and comments now
+
+20170208
+	- disable autocapitalize in ios
+		 <input autocorrect="off" autocapitalize="off"/>
+	- fixed
+		<b>Warning</b>:  Invalid argument supplied for foreach() in <b>C:\Users\AlanPoon\Google Drive\___CETL\YOCLE\web\svrop_activity.php</b> on line <b>515</b><br />
+		- convertemailtouser
+	- period of assessment follows that of activity
+
+20170207
+	- added bootstrapDialog waiting for
+	- added bootstrapDialog confirm
+		- save/publish/submit
+		- close
+	- added assessment desc
+	- reorder assessment edit/view
+
+20170206
+	- fixed activity desc height
+			.wysihtml5-toolbar .btn{
+				height: 20px;
+			}
+			.input_wysihtml5{
+				height:200px;
+			}
+			.editable-buttons .btn{
+				min-width:50px;
+			}
+			.input_area2 .btn{
+				width:80px;
+			}
+	- fixed $(window).animate()
+
+20170203
+	- added left-arrow to return from popup page.
+		- http://www.flaticon.com/free-icon/left-arrow_23798#term=left arrow&page=4&position=65
+
+20170201
+	- enable or disable service
+		- http://askubuntu.com/questions/19320/how-to-enable-or-disable-services
+		- nano /var/log/mongodb/mongod.log
+		- nano /etc/mongod.conf
+			- YAML does not support tab characters for indentation: use spaces instead.
+			- storage:
+					mmapv1:
+						smallFiles: true
+		- chown -R mongodb:mongodb /var/lib/mongodb (http://stackoverflow.com/questions/6819852/cant-start-mongodb-as-sudo)
+		- service mongod start
+		- status mongod
+		
+
+20170118
+	- added and commented some missed files
+	- upgrade to bootstrap3.3.3.css
+	- fixed chart_userpage
+	- added changeprofile
+	- adding cmenu
+
+20170117
+- fixed xeditable user_id
+- fixed android xeditable wysihtml5
+- fixed manifest.json
+
+20170117
+- simplified activity list
+- fixed xeditable (web & ios)
+
+20170111
+- stopped using open_newwin
+- fixed impression_coor1
+- fixed mcq assr_asst_marks
+- fixed popup tables too wide: viewImpression_coor3
+- cancelled toolti for mobile platforms
+- stopped slideshow (bxslide) for mobile platforms
+- preparing cc's test cases
+
+20160110
+	- cannot use the part (skills of skills.Communication.usr_final_score) to traverse the element ({skills: []}) 
+		> change to skills: {}
+
+20170110
+	- repeated_perform
+	- repeated_mark
+	- toggle markings by expand
+	
+20170109
+	- resumed hacked database
+	- added delete button for shorter assessment table (in popup page)
+	- edit: save sur done
+	- view: save prt done
+
+20170104
+	- fixed view 6 methods
+	- fixed edit assessments	
+
+20161216
+	- fixed datatable responsive expand button for android by css
+
+20161216
+	- mobile layout
+		- act edit, list okay
+	- reorganize file names
+		- index_<object>_<action>.php/js
+		- index_method.php & index_method_<method>.php (consists of html and js code)
+
+20161215
+	- both newwin and rootwin are fitted with the html bootstrap grid
+
+20161209
+	- login page (login, signup) is ready for 3 versions
+
+20161208
+	- housekeeping cleaning
+	- copied dev_web for separate development for other platforms
+
+20161208
+	- added coordinator_username for get_activity query
+	- fixed activity_edit page width size issue
+		- setTokenfieldWidth: jobj.width(w - 60);
+
+20161208
+	- resume wysihtml5 in objectives
+	- show gs_score even with no skills
+	- uploader_convert.php running on the production server
+
+20161207
+	- used JSON.stringify(activity) saveactivity => can save empty object and array templates
+	- added timeout before saveactivity => allow save inline forms
+	- added setActImgSrc => show activity image instead of the user one
+	- working on publish_activity
+
+20161206
+	- fixed all checkLoseInput() for the return value
+	- added clearTokenfield() & setTokenfieldWidth()
+
+20161205
+	- fixed checkloseinput issues
+	- upgraded jquery-3.1.1.js and jquery-ui jquery-ui-1.12.1.js
+
+20161204
+	- solved skills breakdown issue
+	- fixed chartjs scale tick issues
+
+20161204
+	- apk path: C:\yocleapp\app\build\outputs\apk
+
+20161203
+	- fixed final_score calc
+
+20161202
+	- finished impression front-end, middleware and back-end
+
+20161201
+	- used better scheme on impression
+
+20161130
+	- fixed some layout issues on view assessment
+	
+20161130
+	- written submitAssessment(); (to be tested
+	- fixed xeditable wysihtml5-0.3.0-alan.js on Android browser
+		this._isCompatible    = 1;	// forced to be compatible by alantypoon 20161129
+	- italic xeditable input before save
+	- assessment save, perform, mark and review is done
+
+20161127
+	- added savePeerAssessors() in svrop.php for setPeerAssessment2() (tested)
+	- finished save & submit assessment ()
+	
+20161126
+	- fixed setPeerAssessment2 for selecting peer assessors by datatable instead of multiselect
+	- added div_error_msg for peer assessors selection
+
+20161124	
+	[to do]
+	- show a datatable for peer assessors so that panelists + peer_assessors = my_assessors
+	- add save peer assessment
+	- add save function
+	- add submit function
+	- add publish function
+
+
+20161124
+	- added activities samples for coordinator, assessor and participant
+	- showed weight of assessment and items
+	- created 3-role data for 6 activities
+	- moved delete to the activity view page
+
+20161122
+	- revised assessments and impression
+		- added header
+	- prepared everthing before featherlight
+
+20161120
+	- simplified assessment layout
+
+20161119
+	- split assessment view into 3 tables
+	- added datatables.responsive.js
+	- added datatable_test.php
+
+20161117
+	- fixed issues in splitting skills into 3 tables
+	- added getMyAssessor from panelists
+
+20161115
+	- split impression view into 3 tables
+		- coordinator
+		- assessors
+		- participants
+
+20161112
+	- removed RadarChart.js index_breadcrumb.js 
+	- added index_skills.js
+		- setSkillTable
+		- setSkillChart
+	- used stars instead of numbers in skill tables
+
+20161111
+	- work flow
+		- assessments
+				- preview
+				- perform
+				- mark
+					- open assessees
+					- review answer and marking
+				- review
+
+20161109
+	- http://seiyria.com/bootstrap-slider/
+	- working on assessment_methods.js
+
+20161107
+	- smaller uploader view prev and next button so video controls can be functioned
+	- fixed double videoplay by removing attribute autoplay and adding play() after fully loaded
+
+20161107
+	- show navigation bar always
+	- remove drop down buttons
+	- removed breadcrumb
+	- added support of multiple paths for uploader_convert.php
+
+20161009
+	- fixed bootstrap-editable-alan.js his to this 
+	- fixed svrop.php item_sort($a, $b) with other type of editable
+	- type to act_type
+
+20161001
+	- show the correct answer as a bootstrap tooltip
+		- http://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_ref_js_tooltip_methods&stacked=h
+		- http://www.cssarrowplease.com/
+
+20160928
+	- multiselect
+		- http://loudev.com/
+		- https://github.com/davidstutz/bootstrap-multiselect
+		- https://jqueryui.com/selectable/
+		- https://harvesthq.github.io/chosen/
+			- http://jsfiddle.net/MyRentals/2ZAgU/
+		- http://stackoverflow.com/questions/29314909/bootstrap-multi-select-adding-images-after-checkboxes
+		- bootstrap-multiselect.js https://github.com/davidstutz/bootstrap-multiselect
+			- http://jsfiddle.net/5b39tatu/3/
+
+20160927
+		- bootstrap-tokenfield.js
+			- isNaN(w) ? this.$input.width('100%') : this.$input.width(w-6); // alantypoon 20160928: -6 = avoid the width is changed to pixel automatically
+		- jquery.datetimepicker.full.js alantypoon 20160928: prevent Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'.
+
+20160926
+	- jQuery Linked UI Sliders: http://keith-wood.name/linkedsliders.html
+	- jQuery Interconnected Sliders: https://github.com/gburtini/jquery-interconnected-sliders
+
+20160926
+	- generic skills added
+
+20160920
+	- added tokenfield to typeahead.js
+	- added tt-dropdown-menu min-width: 400px
+	- must be confirmed users
+
+20160919
+	- http://myscript.com/
+	- http://cat.prhlt.upv.es/mer/
+	- http://detexify.kirelabs.org/classify.html
+
+20160917
+	- find participants from database, with thumbnails
+		- select2
+			- http://stackoverflow.com/questions/12902010/twitter-bootstrap-autocomplete-dropdown-combobox-with-knockoutjs
+			- https://select2.github.io/examples.html#templating
+			- https://select2.github.io/examples.html#data-ajax
+			- http://stackoverflow.com/questions/28355083/how-to-load-json-data-to-use-it-with-select2-plugin
+		- bootstrap 3 typeahead
+			- https://twitter.github.io/typeahead.js/examples/
+
+20160911
+	- resumed chole in network
+	- looping for the activity
+
+20160910
+	- fixed radarchart unable to be shown in mobile
+
+20160909
+	- avoid overwriting the document.title
+	- show tooltip with bootstrap 3
+	- protect windows 7 apache by basic authentication
+		- C:\Apache24\bin\htpasswd.exe -c "C:\Users\alan2\Google Drive\___CETL\YOCLE\web\.htpasswd" cecilia
+		#
+		# http://wiki.apache.org/httpd/PasswordBasicAuth
+		#
+		#AuthType Basic
+		#AuthName "Authentication Required"
+		#AuthUserFile "C:/Users/alan2/Google Drive/___CETL/YOCLE/web/.htpasswd"
+		#Require valid-user
+		#Order allow,deny
+		#Allow from all
+
+20160901
+	- changed the button color from green to blue
+	- scroll2element: 
+			before the focus taking place (much more smoother)
+			only applied when it is not fully visible
+
+20160831
+	- added award, publication, language, interest
+
+20160830
+	- fixed remove profile item affecting position and location
+
+20160830
+	- scroll to editable
+	- load/save sortable order array to database
+	- load/save current location & position
+		- if any present is checked, edit that column
+		- otherwise, show text editing
+	- load/save latest present profile item (if any) to database position and location
+	- scroll the editable to the middle of screen when it is shown
+
+20160829
+	- added delete work item
+	- added client-side validation
+	- added sorting after update
+	- added other xeditable js & css
+
+20160826
+	- added work.js
+	- added trash button
+	- added corresponding database update for profile items
+	
+	- adding:
+		- checkbox: I currently work here
+		- sorting the date
+
+20160819
+	- added bsontest.php which can read write files to database
+
+20160817
+	- selecting inline editor
+		- https://vitalets.github.io/x-editable/demo-jqueryui.html?c=inline
+		- http://www.appelsiini.net/projects/jeditable
+		- http://www.codenothing.com/archives/2009/inline-text-edit/
+		- http://angularscript.com/linkedin-style-inline-editing-with-angularjs-editme/
+
+20160815
+	- added network, participated, coordinated
+	
+	-doing
+		- popup menu
+			- edit profile
+			- print profile
+			
+		- edit my profile
+		- upload my photo
+	
+20160613
+	- added chole pages
+	- added activity period
+	- fixed create activity video
+	
+20160611
+	- used data.js to fill tbl_search_activity
+	
+20160601
+	- added oclx assessor
+	- added open comments by textarea and autosize.js
+	- added stamper toggle by toggle.js
+	- added GS Skill rating by jquery.star-rating-svg
+	- added GS Status by gauge.js
+
+20160531
+	- added edit func on all olcx-yolox item pages
+	- change local video to youtube video
+
+20060523
+	- added abstract
+	- added blog
+	- added participation
+	- added reflective
+
+20160520
+	- added getSelectMethod
+	- added methods
+		- abstract
+		- blog
+		- mcq
+		- participation
+		- reflective piece
+		- survey
+		
+20160519
+	- toolbar
+		- added group
+		- added image
+

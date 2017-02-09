@@ -1,0 +1,10 @@
+{
+  "manifest_version": 2,
+  "name": "extension",
+  "version": "1.0",
+  "description": "Yocle",
+  "browser_action": {
+      "default_icon": "ms-icon-70x70.png",
+      "default_popup": "index.php"
+  }
+}
